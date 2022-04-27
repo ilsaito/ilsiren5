@@ -7,27 +7,48 @@ body {
   background-color: aqua;
 }
 p {
-  font-size:  20px;
-  display: flex;
-  justify-content: center;
+  font-size:  24px;
 }
 
-.smoure{
-  font-size: 12px;
+span {
+  cursor: pointer;
+  border-radius: 80%;
+  background-color: rgb(182, 182, 185);
+}
+
+.sizd{
+  font-size: 32px;
+}
+
+.sizd span + span {
+  margin: 8px;
 }
 
 /*  */
 /* main */
 /*  */
 
+main {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 8px;
+}
 main section{
   display: flex;
   justify-content: center;
 }
+main input {
+  margin: auto;
+  background-color: rgb(204, 211, 226);
+}
 
-#button0, #button1, #button2, #button3, #button4{
-  width: 130px;
-  height: 40px;
+#button0, #button1, #button2, #button5, #button4{
+  display: flex;
+  margin : 4px;
+  border-radius: 50%;
+  background-color: rgb(226, 236, 78);
+  cursor: pointer;
+  border: solid 3px rgb(252, 246, 246);
 }
 
 .lei {
