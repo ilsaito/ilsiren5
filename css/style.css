@@ -18,10 +18,27 @@ span {
 
 .sizd{
   font-size: 32px;
+  display: grid;
+  grid-template: 
+  "ten   ten   ten   ten   ten  " 40px
+  "..... ..... ..... ..... ....." 5px
+  "one   ..... two   ..... three" 40px
+  "..... ..... ..... ..... ....." 5px
+  "four  ..... five  ..... six  " 40px
+  "..... ..... ..... ..... ....." 5px 
+  "seven ..... eight ..... nine " 40px
+  "..... ..... ..... ..... ....." 5px 
+  "..... ..... zero  ..... ....." 40px
+  /150px 4px   150px 4px   150px;
 }
+#d0{grid-area: zero;}#d1{grid-area: one;}#d2{grid-area: two;}#d3{grid-area: three;}#d4{grid-area: four;}#d5{grid-area: five;}#d6{grid-area: six;}#d7{grid-area: seven;}#d8{grid-area: eight;}#d9{grid-area: nine;}#d10{grid-area: ten;}
 
-.sizd span + span {
-  margin: 8px;
+.sizd button{
+  font-size: 32px;
+  border-radius: 50%;
+}
+.sizd button #d0{
+  border-radius: unset;
 }
 
 /*  */

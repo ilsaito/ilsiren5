@@ -1,16 +1,18 @@
 'use strict'
 {
   ////    ↓オブジェクト↓    /////
-    //オブジェクト内のキーデータオブジェクト
+  //オブジェクト内のキーデータオブジェクト
   const keyObj = {
-    names: "keyOb用",
-    Skai: null, kai: null, Nkai: null, Suri: null, uri: null, Nuri: null,
+    names: "値段のキーオブジェクト",
+    Skai:  null, kai:  null, Nkai:  null, Suri:  null, uri:  null, Nuri:  null,
     Skai7: null, kai7: null, Nkai7: null, Suri7: null, uri7: null, Nuri7: null,
     Skai6: null, kai6: null, Nkai6: null, Suri6: null, uri6: null, Nuri6: null,
     Skai5: null, kai5: null, Nkai5: null, Suri5: null, uri5: null, Nuri5: null,
     Skai4: null, kai4: null, Nkai4: null, Suri4: null, uri4: null, Nuri4: null,
     Skai3: null, kai3: null, Nkai3: null, Suri3: null, uri3: null, Nuri3: null,
     Skai2: null, kai2: null, Nkai2: null, Suri2: null, uri2: null, Nuri2: null,
+    Skai1: null, kai1: null, Nkai1: null, Suri1: null, uri1: null, Nuri1: null,
+    Skai0: null, kai0: null, Nkai0: null, Suri0: null, uri0: null, Nuri0: null,
   };
   //腕輪データ
   const udewa = {
@@ -271,20 +273,18 @@
   for (let i = 0;i < 7;i++) {
     p[i] = document.createElement("p");           //生成
   };
-  const text0 = document.getElementById("number0");//入力
-  const text1 = document.getElementById("number1");
-  const text2 = document.getElementById("number2");
-  const text4 = document.getElementById("number4");
-  const text5 = document.getElementById("number5");
+  const text = [];
+  for (let i = 0;i < 6;i++) {
+    text[i] = document.getElementById(`number${i}`);//入力
+  };
   const outdate = [];
   for (let i = 0;i < 11;i++) {
-  outdate[i] = document.getElementById(`${i}`);
+  outdate[i] = document.getElementById(`d${i}`);
   };
-  const bottton0 = document.getElementById("button0");
-  const bottton1 = document.getElementById("button1");
-  const bottton2 = document.getElementById("button2");
-  const bottton4 = document.getElementById("button4");
-  const bottton5 = document.getElementById("button5");
+  const bottton = [];
+  for (let i = 0;i < 6; i++){
+    bottton[i] = document.getElementById(`button${i}`);
+  }
   const divid0 = document.getElementById("div0");//出力
   const divid1 = document.getElementById("div1");
   const divid2 = document.getElementById("div2");
@@ -294,15 +294,6 @@
   //////    ↓メソッド関数宣言↓    /////
   
   //繰り返し処理の関数
-  function keyif0(e){
-    p[0].textContent = "";
-    keys0.forEach(key => {
-      e.preventDefault();
-      if(`${iteme[key]}` === text0.value){
-        p[0].textContent += `${key}。`;
-      }
-    });
-  }
   function SNurikai(keysss,i){//祝福封印判定メソッド
     if("Skai" === keysss){p[i].textContent += "、祝福。"; }
     if("kai" === keysss){p[i].textContent += "。"; }
@@ -349,13 +340,12 @@
     if("Nuri3" === keysss){ p[i].textContent += "、[3]封印。"; }
     if("Nuri2" === keysss){ p[i].textContent += "、[2]封印。"; }
   }
-
   function tuekei(e) {
     p[5].textContent = "";
     tueOb.forEach(key1 => {
       keysObj.forEach(key2 => {
         e.preventDefault();
-        if (text5.value === `${tue[key1][key2]}`) {
+        if (text[5].value === `${tue[key1][key2]}`) {
           p[5].textContent += tue[key1].names;
           SNurikai(key2, 5);
         }
@@ -367,7 +357,7 @@
     keys.forEach(key1 => {
       keysObj.forEach(key2 => {
         e.preventDefault();
-        if (text1.value === `${udewa[key1][key2]}`) {
+        if (text[1].value === `${udewa[key1][key2]}`) {
           p[1].textContent += udewa[key1].names;
           SNurikai(key2, 1);
         }
@@ -379,7 +369,7 @@
     keys2.forEach(key1 => {
       keysObj.forEach(key2 => {
         e.preventDefault();
-        if (text2.value === `${makimono[key1][key2]}`) {
+        if (text[2].value === `${makimono[key1][key2]}`) {
           p[2].textContent += makimono[key1].names;
           SNurikai(key2, 2);
         }
@@ -391,7 +381,7 @@
     keys4.forEach(key1 => {
       keysObj.forEach(key2 => {
         e.preventDefault();
-        if (text4.value === `${tubo[key1][key2]}`) {
+        if (text[4].value === `${tubo[key1][key2]}`) {
           p[4].textContent += tubo[key1].names;
           SNurikai(key2, 4);
         }
@@ -403,7 +393,7 @@
     keys0.forEach(key1 => {
       keysObj.forEach(key2 => {
         e.preventDefault();
-        if (text0.value === `${iteme[key1][key2]}`) {
+        if (text[0].value === `${iteme[key1][key2]}`) {
           p[0].textContent += iteme[key1].names;
           SNurikai(key2, 0);
         }
@@ -450,8 +440,9 @@
   }
   //////    ↑メソッド関数宣言↑    /////
 
-
+  //
   /////    ↓イベント↓    /////
+  //
   updateButtons();
   //////    ↓carouselイベント↓    /////
   setupDots();
@@ -463,39 +454,38 @@
     currentIdx--;
     updateDBmS();
   });
-  ///
   //////    ↑carouselイベント↑    /////
-  ////
 
   ////
   /////     ↓メインクリックイベント↓      /////
   ////
-  bottton0.addEventListener("click", e => itemekei(e));
-  bottton1.addEventListener("click", e => udewakei(e));
-  bottton2.addEventListener("click", e => makimonokei(e));
-  bottton4.addEventListener("click", e => tubokei(e));
-  bottton5.addEventListener("click", e => tuekei(e));
-  outdate[0].addEventListener("click", () => {text0.value += 0;});
-  outdate[1].addEventListener("click", () => {text0.value += 1;});
-  outdate[2].addEventListener("click", () => {text0.value += 2;});
-  outdate[3].addEventListener("click", () => {text0.value += 3;});
-  outdate[4].addEventListener("click", () => {text0.value += 4;});
-  outdate[5].addEventListener("click", () => {text0.value += 5;});
-  outdate[6].addEventListener("click", () => {text0.value += 6;});
-  outdate[7].addEventListener("click", () => {text0.value += 7;});
-  outdate[8].addEventListener("click", () => {text0.value += 8;});
-  outdate[9].addEventListener("click", () => {text0.value += 9;});
-  outdate[10].addEventListener("click", () => {text0.value = ""});
+  bottton[0].addEventListener("click", e => itemekei(e));
+  bottton[1].addEventListener("click", e => udewakei(e));
+  bottton[2].addEventListener("click", e => makimonokei(e));
+  bottton[4].addEventListener("click", e => tubokei(e));
+  bottton[5].addEventListener("click", e => tuekei(e));
 
   ///
   /////    ↑メインクリックイベント↑      /////
   ///
+  /////   ↓入力ボタンのクリックイベント   /////
+  for(let ie=0; ie < 6 ; ie++){
+    for(let i=0; i < 11 ; i++){
+      if(i === 10){
+        outdate[i].addEventListener("click", () => {text[ie].value = ""});
+      }else{
+        outdate[i].addEventListener("click", () => {text[ie].value += i;})
+      }
+    }
+  }
+
   ///
   ////    ↓メイン↓      /////
   divid0.appendChild(p[0]);
   divid1.appendChild(p[1]);
   divid2.appendChild(p[2]);
   divid4.appendChild(p[4]);
+  divid5.appendChild(p[5]);
   ////      window.       ////
   window.addEventListener("resize", () => {
     moveSlides();
@@ -507,5 +497,5 @@
 
   
 
-    divid5.appendChild(p[5]);
+
 }
