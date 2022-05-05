@@ -253,6 +253,7 @@
     ...udewa,
     ...kusa,
     ...makimono,
+    ...tue,
     ...tubo,
   };
 
@@ -266,7 +267,7 @@
   const keys0 = Object.keys(iteme);             //オブジェクトキーを配列に変換
   const keys = Object.keys(udewa);
   const keys2 = Object.keys(makimono);
-  const keys4 = Object.keys(tubo);
+  const keys3 = Object.keys(tubo);
   const tueOb = Object.keys(tue);
   const keysObj = Object.keys(keyObj);
   const p = [];
@@ -288,8 +289,8 @@
   const divid0 = document.getElementById("div0");//出力
   const divid1 = document.getElementById("div1");
   const divid2 = document.getElementById("div2");
+  const divid3 = document.getElementById("div3");
   const divid4 = document.getElementById("div4");
-  const divid5 = document.getElementById("div5");
 
   //////    ↓メソッド関数宣言↓    /////
   
@@ -341,13 +342,13 @@
     if("Nuri2" === keysss){ p[i].textContent += "、[2]封印。"; }
   }
   function tuekei(e) {
-    p[5].textContent = "";
+    p[4].textContent = "";
     tueOb.forEach(key1 => {
       keysObj.forEach(key2 => {
         e.preventDefault();
-        if (text[5].value === `${tue[key1][key2]}`) {
-          p[5].textContent += tue[key1].names;
-          SNurikai(key2, 5);
+        if (text[4].value === `${tue[key1][key2]}`) {
+          p[4].textContent += tue[key1].names;
+          SNurikai(key2, 4);
         }
       });
     });
@@ -377,13 +378,13 @@
     });
   }
   function tubokei(e) {
-    p[4].textContent = "";
-    keys4.forEach(key1 => {
+    p[3].textContent = "";
+    keys3.forEach(key1 => {
       keysObj.forEach(key2 => {
         e.preventDefault();
-        if (text[4].value === `${tubo[key1][key2]}`) {
-          p[4].textContent += tubo[key1].names;
-          SNurikai(key2, 4);
+        if (text[3].value === `${tubo[key1][key2]}`) {
+          p[3].textContent += tubo[key1].names;
+          SNurikai(key2, 3);
         }
       });
     });
@@ -462,14 +463,14 @@
   bottton[0].addEventListener("click", e => itemekei(e));
   bottton[1].addEventListener("click", e => udewakei(e));
   bottton[2].addEventListener("click", e => makimonokei(e));
-  bottton[4].addEventListener("click", e => tubokei(e));
-  bottton[5].addEventListener("click", e => tuekei(e));
+  bottton[3].addEventListener("click", e => tubokei(e));
+  bottton[4].addEventListener("click", e => tuekei(e));
 
   ///
   /////    ↑メインクリックイベント↑      /////
   ///
   /////   ↓入力ボタンのクリックイベント   /////
-  for(let ie=0; ie < 6 ; ie++){
+  for(let ie=0; ie < 5 ; ie++){
     for(let i=0; i < 11 ; i++){
       if(i === 10){
         outdate[i].addEventListener("click", () => {text[ie].value = ""});
@@ -484,8 +485,8 @@
   divid0.appendChild(p[0]);
   divid1.appendChild(p[1]);
   divid2.appendChild(p[2]);
+  divid3.appendChild(p[3]);
   divid4.appendChild(p[4]);
-  divid5.appendChild(p[5]);
   ////      window.       ////
   window.addEventListener("resize", () => {
     moveSlides();
