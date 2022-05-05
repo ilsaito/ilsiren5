@@ -1,0 +1,219 @@
+/*  */
+/* common */
+/*  */
+/*  */
+
+body {
+  background-color: aqua;
+}
+p {
+  font-size:  24px;
+}
+
+span {
+  cursor: pointer;
+  border-radius: 80%;
+  background-color: rgb(182, 182, 185);
+}
+
+.nbutton{
+  justify-content: center;
+  font-size: 32px;
+  display: grid;
+  grid-template: 
+  "..... ..... ..... ..... ....." 0px
+  "..... ..... ten   ..... ....." 40px
+  "..... ..... ..... ..... ....." 5px
+  "one   ..... two   ..... three" 40px
+  "..... ..... ..... ..... ....." 5px
+  "four  ..... five  ..... six  " 40px
+  "..... ..... ..... ..... ....." 5px 
+  "seven ..... eight ..... nine " 40px
+  "..... ..... ..... ..... ....." 5px 
+  "..... ..... zero  ..... ....." 40px
+  "..... ..... ..... ..... ....." 10px
+  /120px 0.05fr 120px 0.05fr 120px;
+}
+#d0{grid-area: zero;} #d1{grid-area: one;}  #d2{grid-area: two;}
+#d3{grid-area: three;}#d4{grid-area: four;} #d5{grid-area: five;}
+#d6{grid-area: six;}  #d7{grid-area: seven;}#d8{grid-area: eight;}
+#d9{grid-area: nine;} #d10{grid-area: ten; font-size: 24px;}
+
+
+.nbutton button{
+  font-size: 32px;
+  border-radius: 50%;
+}
+.nbutton button #d0{
+ 
+}
+
+/*  */
+/* main */
+/*  */
+
+main {
+  justify-content: center;
+  display: grid;
+  grid-template:
+  "... ..... .... ..... ..."
+  "... Nu0   .... b0    ..." 
+  "... dip0  dip0 dip0  ..." 
+  "... Nu1   .... b1    ..." 
+  "... dip1  dip1 dip1  ..." 
+  "... Nu2   .... b2    ..." 
+  "... dip2  dip2 dip2  ..." 
+  "... Nu3   .... b3    ..." 
+  "... dip3  dip3 dip3  ..." 
+  "... Nu4   .... b4    ..." 
+  "... dip4  dip4 dip4  ..." 
+  "... ..... .... ..... ..."
+  /4px 200px 4px  200px 4px;
+}
+#number0{grid-area: Nu0;}#number1{grid-area: Nu1;}#number2{grid-area: Nu2;}
+#number3{grid-area: Nu3;}#number4{grid-area: Nu4;}
+#button0{grid-area: b0;}#button1{grid-area: b1;}#button2{grid-area: b2;}
+#button3{grid-area: b3;}#button4{grid-area: b4;}
+#div0{grid-area: dip0;}#div1{grid-area: dip1;}#div2{grid-area: dip2;}
+#div3{grid-area: dip3;}#div4{grid-area: dip4;}
+
+#number0, #number1, #number2, #number3, #number4{
+  font-size: 18px;
+}
+#button0, #button1, #button2, #button3, #button4{
+  
+}
+/* main {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 8px;
+  justify-content: center;
+}
+main section{
+  display: flex;
+}
+main input {
+  margin: auto;
+  background-color: rgb(204, 211, 226);
+  font-size: 24px;
+  width: 120px;  
+}
+main #button0{
+  display: flex;
+
+}
+#button0, #button1, #button2, #button5, #button4{
+  display: flex;
+  margin : 4px;
+  border-radius: 50%;
+  background-color: rgb(226, 236, 78);
+  cursor: pointer;
+  border: solid 3px rgb(252, 246, 246);
+  width: auto;
+  height: auto;
+  font-size: 24px;
+}
+
+.lei {
+  background-color: rgb(140, 221, 59);
+} */
+
+
+
+/* carousel */
+/**/
+.carousel {
+  width: 80%;
+  margin: 16px auto;
+}
+
+.container {
+  width: 100%;
+  height: 220px;
+  overflow: hidden;
+  position: relative;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  display: flex;
+  transition: transform .3s;
+}
+
+li {
+  height: 100%;
+  min-width: 100%;
+}
+
+li img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+#prev,
+#next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  border: none;
+  background: rgba(80,0,0, 8);
+  color: aliceblue;
+  font-size: 16px;
+  padding: 0 8px 4px;
+  margin: 0;
+  cursor: pointer;
+}
+
+#prev:hover,
+#next:hover {
+  opacity: .8;
+}
+
+#prev {
+  left: 0;
+
+}
+#next {
+  right: 0;
+}
+
+.hidden{
+  display: none;
+}
+
+nav {
+  margin-top: 16px;
+  text-align: center;
+}
+
+nav button + button {
+  margin-left: 8px;
+}
+
+nav button {
+  border: none;
+  width: 16px;
+  height: 16px;
+  background: #ddd;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+nav .current {
+  background: #999;
+}
+
+
+/*  */
+/* footer */
+/*  */
+
+footer {
+  margin: 48px 48px;
+  display: flex;
+  justify-content: center;
+}
