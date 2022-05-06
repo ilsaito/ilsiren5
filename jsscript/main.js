@@ -271,19 +271,19 @@
   const tueOb = Object.keys(tue);
   const keysObj = Object.keys(keyObj);
   const p = [];
-  for (let i = 0;i < 7;i++) {
+  for (let i = 0;i <= 6;i++) {
     p[i] = document.createElement("p");           //生成
   };
   const text = [];
-  for (let i = 0;i < 6;i++) {
+  for (let i = 0;i <= 5;i++) {
     text[i] = document.getElementById(`number${i}`);//入力
   };
   const outdate = [];
-  for (let i = 0;i < 11;i++) {
+  for (let i = 0;i <= 11;i++) {
   outdate[i] = document.getElementById(`d${i}`);
   };
   const bottton = [];
-  for (let i = 0;i < 6; i++){
+  for (let i = 0;i <= 5; i++){
     bottton[i] = document.getElementById(`button${i}`);
   }
   const divid0 = document.getElementById("div0");//出力
@@ -401,6 +401,13 @@
       });
     });
   }
+  function Enterd(e){
+    itemekei(e);
+    udewakei(e);
+    makimonokei(e);
+    tubokei(e);
+    tuekei(e);
+  }
   //carouselメソッド
   function updateButtons(){
     prev.classList.remove("hidden");
@@ -470,16 +477,18 @@
   /////    ↑メインクリックイベント↑      /////
   ///
   /////   ↓入力ボタンのクリックイベント   /////
-  for(let ie=0; ie < 5 ; ie++){
-    for(let i=0; i < 11 ; i++){
+  for(let ie=0; ie <= 4 ; ie++){
+    for(let i=0; i <= 11 ; i++){
       if(i === 10){
-        outdate[i].addEventListener("click", () => {text[ie].value = ""});
+        outdate[i].addEventListener("click", () => {text[ie].value = "";});
+      }else if(i === 11){
+        outdate[i].addEventListener("click", (e) => {Enterd(e);});
       }else{
-        outdate[i].addEventListener("click", () => {text[ie].value += i;})
+        outdate[i].addEventListener("click", () => {text[ie].value += i;});
       }
     }
   }
-
+ 
   ///
   ////    ↓メイン↓      /////
   divid0.appendChild(p[0]);

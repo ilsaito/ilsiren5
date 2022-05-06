@@ -21,32 +21,44 @@ span {
   font-size: 32px;
   display: grid;
   grid-template: 
-  "..... ..... ..... ..... ....." 0px
-  "..... ..... ten   ..... ....." 40px
-  "..... ..... ..... ..... ....." 5px
-  "one   ..... two   ..... three" 40px
-  "..... ..... ..... ..... ....." 5px
-  "four  ..... five  ..... six  " 40px
-  "..... ..... ..... ..... ....." 5px 
-  "seven ..... eight ..... nine " 40px
-  "..... ..... ..... ..... ....." 5px 
-  "..... ..... zero  ..... ....." 40px
-  "..... ..... ..... ..... ....." 5px
-  /120px 4px   120px 4px   120px;
+  ".... ..... ..... ..... ..... ...... ...." 0px
+  ".... ..... ..... ten   ..... ...... ...." 40px
+  ".... ..... ..... ..... ..... ...... ...." 5px
+  ".... one   ..... two   ..... three  ...." 40px
+  ".... ..... ..... ..... ..... ...... ...." 5px
+  ".... four  ..... five  ..... six    ...." 40px
+  ".... ..... ..... ..... ..... ...... ...." 5px 
+  ".... seven ..... eight ..... nine   ...." 40px
+  ".... ..... ..... ..... ..... ...... ...." 5px 
+  ".... ..... ..... zero  ..... ileven ...." 40px
+  ".... ..... ..... ..... ..... ...... ...." 10px
+  /auto 120px 0.05fr 120px 0.05fr 120px auto;
 }
 #d0{grid-area: zero;} #d1{grid-area: one;}  #d2{grid-area: two;}
 #d3{grid-area: three;}#d4{grid-area: four;} #d5{grid-area: five;}
 #d6{grid-area: six;}  #d7{grid-area: seven;}#d8{grid-area: eight;}
-#d9{grid-area: nine;} #d10{grid-area: ten;}
-
+#d9{grid-area: nine;} #d10{grid-area: ten; font-size: 24px; color: tomato;}
+#d11{grid-area: ileven;}
+#d10:hover, #d11:hover{
+  display: inline-block;
+  text-decoration: none;
+  border-radius: 3px;
+  font-weight: bold;
+  color: red;
+  background-image: linear-gradient(45deg, #70ffa0 0%, #b0ffd4 100%);
+  transition: .4s;
+}
 
 .nbutton button{
   font-size: 32px;
-  border-radius: 50%;
+  color: #FFF;
+  background: #25a50b;/*背景*/
+  border-bottom: solid 2px #31ee6a;
+  border-radius: 8px;/*角*/
+  box-shadow: inset 0 4px 0 rgba(255, 255, 255, 0.2), 0 4px 4px rgba(0, 0, 0, 0.19);
+  font-weight: bold;
 }
-.nbutton button #d0{
- 
-}
+
 
 /*  */
 /* main */
@@ -80,44 +92,20 @@ main {
 #number0, #number1, #number2, #number3, #number4{
   font-size: 18px;
 }
-#button0, #button1, #button2, #button3, #button4{
+#button0:hover,#button1:hover,#button2:hover,#button3:hover, #button4:hover {
+  display: inline-block;
+  padding: 0.2em 0.4em;
+  text-decoration: none;
+  border-radius: 3px;
+  font-weight: bold;
+  color: #FFF;
+  background-image: linear-gradient(45deg, #709dff 0%, #b0c9ff 100%);
+  transition: .4s;
+}
+
+.lei{
   
 }
-/* main {
-  display: flex;
-  flex-wrap: wrap;
-  margin: 8px;
-  justify-content: center;
-}
-main section{
-  display: flex;
-}
-main input {
-  margin: auto;
-  background-color: rgb(204, 211, 226);
-  font-size: 24px;
-  width: 120px;  
-}
-main #button0{
-  display: flex;
-
-}
-#button0, #button1, #button2, #button5, #button4{
-  display: flex;
-  margin : 4px;
-  border-radius: 50%;
-  background-color: rgb(226, 236, 78);
-  cursor: pointer;
-  border: solid 3px rgb(252, 246, 246);
-  width: auto;
-  height: auto;
-  font-size: 24px;
-}
-
-.lei {
-  background-color: rgb(140, 221, 59);
-} */
-
 
 
 /* carousel */
