@@ -480,7 +480,9 @@
   for(let ie=0; ie <= 4 ; ie++){
     for(let i=0; i <= 11 ; i++){
       if(i === 10){
-        outdate[i].addEventListener("click", () => {text[ie].value = "";});
+        outdate[i].addEventListener("click", () => {
+          text[ie].value = "";
+          p[ie].textContent =""; });
       }else if(i === 11){
         outdate[i].addEventListener("click", (e) => {Enterd(e);});
       }else{

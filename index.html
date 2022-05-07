@@ -9,7 +9,7 @@
   <title>自動値段識別サイト風来のシレン5</title>
 </head>
 <body>
-
+<time id = "getday"></time>
   <section class="carousel">
     <div class="container">
       <ul>
@@ -23,7 +23,19 @@
   <nav>
   </nav>
   </section>
-    <div class="nbutton" id ="cpb" ><button id="d10" ontouchstart="">消去</button> <br> <button id="d0">0</button><button id="d1">1</button><button id="d2">2</button><button id="d3">3</button><button id="d4">4</button><button id="d5">5</button><button id="d6">6</button><button id="d7">7</button><button id="d8">8</button><button id="d9">9</button><button id="d11">ENTER</button>    </div>
+    <div class="nbutton" id ="cpb" ><button id="d10" ontouchstart="">消去</button>
+      <button id="d0" ontouchstart="">0</button>
+      <button id="d1" ontouchstart="">1</button>
+      <button id="d2" ontouchstart="">2</button>
+      <button id="d3" ontouchstart="">3</button>
+      <button id="d4" ontouchstart="">4</button>
+      <button id="d5" ontouchstart="">5</button>
+      <button id="d6" ontouchstart="">6</button>
+      <button id="d7" ontouchstart="">7</button>
+      <button id="d8" ontouchstart="">8</button>
+      <button id="d9" ontouchstart="">9</button>
+      <button id="d11" ontouchstart="">ENTER</button>
+    </div>
   <main>
     <input type="number" name="値段入れ" id = "number0">
     <button id="button0" ontouchstart="">店主君、アイテムお願い！</button>
@@ -47,6 +59,7 @@
 
   </main>
   <script src="jsscript/main.js"></script>
+  <script src="jsscript/kousinday.js"></script>
 </body>
 <footer>
   (c)ilsaito
