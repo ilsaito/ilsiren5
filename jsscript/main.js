@@ -1,18 +1,19 @@
 'use strict'
 {
+  //
   ////    ↓オブジェクト↓    /////
   //オブジェクト内のキーデータオブジェクト
   const keyObj = {
-    names: "値段のキーオブジェクト",
-    Skai:  null, kai:  null, Nkai:  null, Suri:  null, uri:  null, Nuri:  null,
-    Skai7: null, kai7: null, Nkai7: null, Suri7: null, uri7: null, Nuri7: null,
-    Skai6: null, kai6: null, Nkai6: null, Suri6: null, uri6: null, Nuri6: null,
-    Skai5: null, kai5: null, Nkai5: null, Suri5: null, uri5: null, Nuri5: null,
-    Skai4: null, kai4: null, Nkai4: null, Suri4: null, uri4: null, Nuri4: null,
-    Skai3: null, kai3: null, Nkai3: null, Suri3: null, uri3: null, Nuri3: null,
-    Skai2: null, kai2: null, Nkai2: null, Suri2: null, uri2: null, Nuri2: null,
-    Skai1: null, kai1: null, Nkai1: null, Suri1: null, uri1: null, Nuri1: null,
-    Skai0: null, kai0: null, Nkai0: null, Suri0: null, uri0: null, Nuri0: null,
+    names: "値段のキーオブジェクトと祝呪判定後の文字列",
+    Skai:  "、祝福。"   , kai:  "。"     , Nkai:  "、封印。" , Suri:  "、祝福。"   , uri:  "。"     , Nuri:  "、封印。" , 
+    Skai7: "、[7]祝福。", kai7: "、[7]。", Nkai7: "、[7]封印", Suri7: "、[7]祝福。", uri7: "、[7]。", Nuri7: "、[7]封印",
+    Skai6: "、[6]祝福。", kai6: "、[6]。", Nkai6: "、[6]封印", Suri6: "、[6]祝福。", uri6: "、[6]。", Nuri6: "、[6]封印",
+    Skai5: "、[5]祝福。", kai5: "、[5]。", Nkai5: "、[5]封印", Suri5: "、[5]祝福。", uri5: "、[5]。", Nuri5: "、[5]封印",
+    Skai4: "、[4]祝福。", kai4: "、[4]。", Nkai4: "、[4]封印", Suri4: "、[4]祝福。", uri4: "、[4]。", Nuri4: "、[4]封印",
+    Skai3: "、[3]祝福。", kai3: "、[3]。", Nkai3: "、[3]封印", Suri3: "、[3]祝福。", uri3: "、[3]。", Nuri3: "、[3]封印",
+    Skai2: "、[2]祝福。", kai2: "、[2]。", Nkai2: "、[2]封印", Suri2: "、[2]祝福。", uri2: "、[2]。", Nuri2: "、[2]封印",
+    Skai1: "、[1]祝福。", kai1: "、[1]。", Nkai1: "、[1]封印", Suri1: "、[1]祝福。", uri1: "、[1]。", Nuri1: "、[1]封印",
+    Skai0: "、[0]祝福。", kai0: "、[0]。", Nkai0: "、[0]封印", Suri0: "、[0]祝福。", uri0: "、[0]。", Nuri0: "、[0]封印",
   };
   //腕輪データ
   const udewa = {
@@ -240,7 +241,7 @@
       Skai3: 1265, kai3: 1150, Nkai3: 920, Suri3: 442, uri3: 402, Nuri3: 321,
       Skai2: 1210, kai2: 1100, Nkai2: 880, Suri2: 423, uri2: 385, Nuri2: 308,
     },
-    tubo11: {
+    tubo13: {
       names: "識別の壺、ただの壺、保存の壺、やりすごしの壺、四二鉢", 
       Skai5: 825, kai5: 750, Nkai5: 600, Suri5: 288, uri5: 262, Nuri5: 209,
       Skai4: 792, kai4: 720, Nkai4: 576, Suri4: 277, uri4: 252, Nuri4: 201,
@@ -251,95 +252,63 @@
   //合成データ
   const iteme = {
     ...udewa,
-    ...kusa,
+    // ...kusa,
     ...makimono,
     ...tue,
     ...tubo,
   };
-
+  //
   //////    ↓定数宣言↓    /////
+  //
   const next = document.getElementById("next"); //carousel要素取得
   const prev = document.getElementById("prev");
   const ul = document.querySelector("ul");
-  const slides = ul.children;                   //carousel要素取得
+  const slides = ul.children;
   let currentIdx = 0;
-  const dots = [];
+  const dots = [];                              //carousel要素取得
+
   const keys0 = Object.keys(iteme);             //オブジェクトキーを配列に変換
   const keys = Object.keys(udewa);
   const keys2 = Object.keys(makimono);
   const keys3 = Object.keys(tubo);
   const tueOb = Object.keys(tue);
-  const keysObj = Object.keys(keyObj);
-  const p = [];
+  const keysObj = Object.keys(keyObj);          //オブジェクトキーを配列に変換
+
+  const p = [];                                 //<p>生成
   for (let i = 0;i <= 6;i++) {
-    p[i] = document.createElement("p");           //生成
-  };
-  const text = [];
+    p[i] = document.createElement("p");
+  };                                            //<p>生成
+
+  const text = [];                                    //text[]取得（入力数値etc...）
   for (let i = 0;i <= 5;i++) {
-    text[i] = document.getElementById(`number${i}`);//入力
-  };
-  const outdate = [];
+    text[i] = document.getElementById(`number${i}`);
+  };                                                  //text[]取得（入力数値etc...）
+
+  const outdate = [];                             //テンキーボタン取得
   for (let i = 0;i <= 11;i++) {
   outdate[i] = document.getElementById(`d${i}`);
-  };
-  const bottton = [];
+  };                                              //テンキーボタン取得
+
+  const bottton = [];                                   //ボタン取得
   for (let i = 0;i <= 5; i++){
     bottton[i] = document.getElementById(`button${i}`);
-  }
-  const divid0 = document.getElementById("div0");//出力
+  }                                                     //ボタン取得
+
+  const divid0 = document.getElementById("div0");       //出力位置取得
   const divid1 = document.getElementById("div1");
   const divid2 = document.getElementById("div2");
   const divid3 = document.getElementById("div3");
-  const divid4 = document.getElementById("div4");
-
+  const divid4 = document.getElementById("div4");       //出力位置取得
+  //
   //////    ↓メソッド関数宣言↓    /////
-  
+  //
   //繰り返し処理の関数
   function SNurikai(keysss,i){//祝福封印判定メソッド
-    if("Skai" === keysss){p[i].textContent += "、祝福。"; }
-    if("kai" === keysss){p[i].textContent += "。"; }
-    if("Nkai" === keysss){p[i].textContent += "、封印。"; }
-    if("Suri" === keysss){p[i].textContent += "、祝福。"; }
-    if("uri" === keysss){p[i].textContent += "。"; }
-    if("Nuri" === keysss){p[i].textContent += "、封印。"; }
-    
-    //杖壺の識別
-    if("Skai7" === keysss){ p[i].textContent += "[7]祝福。"; }
-    if("Skai6" === keysss){ p[i].textContent += "、[6]祝福。"; }
-    if("Skai5" === keysss){ p[i].textContent += "、[5]祝福。"; }
-    if("Skai4" === keysss){ p[i].textContent += "、[4]祝福。"; }
-    if("Skai3" === keysss){ p[i].textContent += "、[3]祝福。"; }
-    if("Skai2" === keysss){ p[i].textContent += "、[2]祝福。"; }
-    if("kai7" === keysss){ p[i].textContent += "、[7]。"; }
-    if("kai6" === keysss){ p[i].textContent += "、[6]。"; }
-    if("kai5" === keysss){ p[i].textContent += "、[5]。"; }
-    if("kai4" === keysss){ p[i].textContent += "、[4]。"; }
-    if("kai3" === keysss){ p[i].textContent += "、[3]。"; }
-    if("kai2" === keysss){ p[i].textContent += "、[2]。"; }
-    if("Nkai7" === keysss){ p[i].textContent += "、[7]封印。"; }
-    if("Nkai6" === keysss){ p[i].textContent += "、[6]封印。"; }
-    if("Nkai5" === keysss){ p[i].textContent += "、[5]封印。"; }
-    if("Nkai4" === keysss){ p[i].textContent += "、[4]封印。"; }
-    if("Nkai3" === keysss){ p[i].textContent += "、[3]封印。"; }
-    if("Nkai2" === keysss){ p[i].textContent += "、[2]封印。"; }
-    if("Suri7" === keysss){ p[i].textContent += "、[7]祝福。"; }
-    if("Suri6" === keysss){ p[i].textContent += "、[6]祝福。"; }
-    if("Suri5" === keysss){ p[i].textContent += "、[5]祝福。"; }
-    if("Suri4" === keysss){ p[i].textContent += "、[4]祝福。"; }
-    if("Suri3" === keysss){ p[i].textContent += "、[3]祝福。"; }
-    if("Suri2" === keysss){ p[i].textContent += "、[2]祝福。"; }
-    if("uri7" === keysss){ p[i].textContent += "、[7]。"; }
-    if("uri6" === keysss){ p[i].textContent += "、[6]。"; }
-    if("uri5" === keysss){ p[i].textContent += "、[5]。"; }
-    if("uri4" === keysss){ p[i].textContent += "、[4]。"; }
-    if("uri3" === keysss){ p[i].textContent += "、[3]。"; }
-    if("uri2" === keysss){ p[i].textContent += "、[2]。"; }
-    if("Nuri7" === keysss){ p[i].textContent += "、[7]封印。"; }
-    if("Nuri6" === keysss){ p[i].textContent += "、[6]封印。"; }
-    if("Nuri5" === keysss){ p[i].textContent += "、[5]封印。"; }
-    if("Nuri4" === keysss){ p[i].textContent += "、[4]封印。"; }
-    if("Nuri3" === keysss){ p[i].textContent += "、[3]封印。"; }
-    if("Nuri2" === keysss){ p[i].textContent += "、[2]封印。"; }
+    keysObj.forEach(key1s =>{
+        if(key1s === keysss){
+          p[i].textContent += keyObj[key1s]; 
+        }
+    });
   }
   function tuekei(e) {
     p[4].textContent = "";
@@ -446,8 +415,9 @@
     updateButtons();
     moveSlides();
   }
+  //
   //////    ↑メソッド関数宣言↑    /////
-
+  //
   //
   /////    ↓イベント↓    /////
   //
@@ -484,9 +454,9 @@
           text[ie].value = "";
           p[ie].textContent =""; });
       }else if(i === 11){
-        outdate[i].addEventListener("click", (e) => {Enterd(e);});
+        outdate[i].addEventListener("click", (e) => {Enterd(e);});          //メインクリックイベント全てクリックボタンイベント
       }else{
-        outdate[i].addEventListener("click", () => {text[ie].value += i;});
+        outdate[i].addEventListener("click", () => {text[ie].value += i;}); //入力ボタンイベント
       }
     }
   }

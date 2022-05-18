@@ -4,6 +4,8 @@
 /*  */
 
 body {
+  padding: 0;
+  margin: 0;
   background-color: aqua;
 }
 p {
@@ -15,6 +17,29 @@ span {
   border-radius: 80%;
   background-color: rgb(182, 182, 185);
 }
+
+header{
+  margin: 0;
+  padding: 0;
+}
+
+/*  */
+/* header */
+/*  */
+
+.gridh{
+  background-color: rgb(41, 15, 0);
+  display: grid;
+  grid-template:
+  "... ..... .... ...... ..." 0px
+  "... time  .... ...... ..." 
+  "... hed   .... helps  ..." 
+  "... ..... .... ...... ..." 0px
+  /0px 1fr auto 30px   4px;
+}
+#getday{grid-area: time; font-size: 4px; color: #999;}
+#hedp  {grid-area: hed;  font-size: 24px; color: rgb(255, 255, 255); white-space: nowrap}
+#help  {grid-area: helps;font-size: 6px; color: rgb(255, 255, 255);}
 
 .nbutton{
   justify-content: center;
@@ -40,7 +65,7 @@ span {
 #d9{grid-area: nine;} #d10{grid-area: ten; font-size: 24px; color: tomato;}
 #d11{grid-area: ileven;}
 .nbutton #d0:hover, #d1:hover, #d2:hover, #d3:hover, #d4:hover, #d5:hover, #d6:hover, #d7:hover, #d8:hover, #d9:hover{
-  color: rgb(17, 0, 255);
+  color: rgb(0, 255, 191);
 }
 #d10:hover, #d11:hover{
   display: inline-block;
@@ -49,7 +74,7 @@ span {
   font-weight: bold;
   color: red;
   background-image: linear-gradient(45deg, #70ffa0 0%, #b0ffd4 100%);
-  transition: .4s;
+  transition: .2s;
 }
 
 .nbutton button{
@@ -71,19 +96,19 @@ main {
   justify-content: center;
   display: grid;
   grid-template:
-  "... ..... .... ..... ..."
-  "... Nu0   .... b0    ..." 
-  "... dip0  dip0 dip0  ..." 
-  "... Nu1   .... b1    ..." 
-  "... dip1  dip1 dip1  ..." 
-  "... Nu2   .... b2    ..." 
-  "... dip2  dip2 dip2  ..." 
-  "... Nu3   .... b3    ..." 
-  "... dip3  dip3 dip3  ..." 
-  "... Nu4   .... b4    ..." 
-  "... dip4  dip4 dip4  ..." 
-  "... ..... .... ..... ..."
-  /4px 200px 4px  200px 4px;
+  ".... .... ..... .... ..... .... ...."
+  ".... .... Nu0   .... b0    .... ...." 
+  ".... dip0 dip0  dip0 dip0  dip0 ...." 
+  ".... .... Nu1   .... b1    .... ...." 
+  ".... dip1 dip1  dip1 dip1  dip1 ...." 
+  ".... .... Nu2   .... b2    .... ...." 
+  ".... .... dip2  dip2 dip2  .... ...." 
+  ".... .... Nu3   .... b3    .... ...." 
+  ".... .... dip3  dip3 dip3  .... ...." 
+  ".... .... Nu4   .... b4    .... ...." 
+  ".... .... dip4  dip4 dip4  .... ...." 
+  ".... .... ..... .... ..... .... ...."
+  /0.5fr auto 200px 4px  200px auto 0.5fr;
 }
 #number0{grid-area: Nu0;}#number1{grid-area: Nu1;}#number2{grid-area: Nu2;}
 #number3{grid-area: Nu3;}#number4{grid-area: Nu4;}
@@ -213,6 +238,3 @@ footer {
 /* foo */
 /*  */
 
-#getday{
-  background-color: rgb(158, 74, 74);
-}
