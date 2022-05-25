@@ -32,14 +32,16 @@ header{
   display: grid;
   grid-template:
   "... ..... .... ...... ..." 0px
-  "... time  .... ...... ..." 
-  "... hed   .... helps  ..." 
-  "... ..... .... ...... ..." 0px
-  /0px 1fr auto 30px   4px;
+  "... time  .... ...... ..." 12px
+  "... hed   .... ...... ..." 4px 
+  "... hed   .... helps  ..." 12px
+  "... hed   .... ...... ..." 16px
+  "... ..... .... ...... ..." auto
+  /0px 1fr   auto 62px   4px;
 }
 #getday{grid-area: time; font-size: 4px; color: #999;}
 #hedp  {grid-area: hed;  font-size: 24px; color: rgb(255, 255, 255); white-space: nowrap}
-#help  {grid-area: helps;font-size: 6px; color: rgb(255, 255, 255);}
+#help  {grid-area: helps;font-size: 16px; color: rgb(255, 255, 255);}
 
 .nbutton{
   justify-content: center;
@@ -102,13 +104,13 @@ main {
   ".... .... Nu1   .... b1    .... ...." 
   ".... dip1 dip1  dip1 dip1  dip1 ...." 
   ".... .... Nu2   .... b2    .... ...." 
-  ".... .... dip2  dip2 dip2  .... ...." 
+  ".... dip2 dip2  dip2 dip2  dip2 ...." 
   ".... .... Nu3   .... b3    .... ...." 
-  ".... .... dip3  dip3 dip3  .... ...." 
+  ".... dip3 dip3  dip3 dip3  dip3 ...." 
   ".... .... Nu4   .... b4    .... ...." 
-  ".... .... dip4  dip4 dip4  .... ...." 
+  ".... dip4 dip4  dip4 dip4  dip4 ...." 
   ".... .... ..... .... ..... .... ...."
-  /0.5fr auto 200px 4px  200px auto 0.5fr;
+  /10%  1fr  200px 4px  200px  1fr 10% ;
 }
 #number0{grid-area: Nu0;}#number1{grid-area: Nu1;}#number2{grid-area: Nu2;}
 #number3{grid-area: Nu3;}#number4{grid-area: Nu4;}
@@ -131,9 +133,6 @@ main {
   transition: .4s;
 }
 
-.lei{
-  
-}
 
 
 /* carousel */
@@ -150,7 +149,7 @@ main {
   position: relative;
 }
 
-ul {
+.carousel ul {
   list-style: none;
   margin: 0;
   padding: 0;
@@ -159,12 +158,12 @@ ul {
   transition: transform .3s;
 }
 
-li {
+.carousel li {
   height: 100%;
   min-width: 100%;
 }
 
-li img {
+.carousel li img {
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -238,3 +237,60 @@ footer {
 /* foo */
 /*  */
 
+.topdat{
+  font-size: 150%;
+  display: flex;
+  justify-content: center;
+}
+/* .gridtb{
+  padding: 20px;
+} */
+
+.gridtb {
+  margin: 30px auto;
+  width: 500px;
+}
+.ment{
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+}
+
+.ment li a {
+  display: inline-block;
+  width: 100px;
+  text-align: center;
+  padding: 8px 0;
+  columns: #333;
+  text-decoration: none;
+  border-radius: 8px 8px 0 0;
+}
+
+.ment li a.act{
+  background-color: #333;
+  color: #FFF;
+}
+.ment li a:not(.act):hover{
+  opacity: 0.5;
+  transition: opacity 0.4s;
+}
+.contentg.act{
+  background-color: #333;
+  color: #FFF;
+  min-height: 150px;
+  padding: 12px;
+  display: block;
+
+}
+
+.contentg{
+  display: none;
+}
+
+/*  */
+/* small screen */
+/*  */
+@media (min-width: 0px) and (maX-width: 560px){
+
+}
