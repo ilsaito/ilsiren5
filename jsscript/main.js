@@ -319,29 +319,28 @@
     e.preventDefault();
     const Objs = Object.keys(Obj);    //アイテムのオブジェクトを配列に変換
     if(ide > 0){
-      for (let i = 1; i <= ide; i++){
-        console.log(ide);
+      for (let i = 0; i < ide; i++){
         p[i].remove();       //ｐタグ初期化
       }
     }
     ide = 0;           //初期化フラグ用変数
     Objs.forEach(key1 => {            //アイテムそれぞれの繰り返し
       keysObj.forEach(key2 => {       //アイテム内の祝福封印の繰り返し
-        if (text[data].value === `${Obj[key1][key2]}`) {    //値段判定
+        if (text[data].value == `${Obj[key1][key2]}`) {    //値段判定
             keysObjName.forEach(key3 => {                     //アイテム名前の繰り返し
               if(Obj[key1][key3] === undefined){} else {        //ナンバー無の振り落とし
-                ide++;
                 p[ide] = document.createElement("p");        //pタグ生成
+                p[ide].textContent += Obj[key1][key3];       //アイテム名格納 Obj[][]でアイテム名指定
                 for (let i = 0; i <= 173; i++){
                   if(tyeck[i].checked){
                   }else if(Obj[key1][key3] === tyeck[i].value){
-                    p[ide].textContent += Obj[key1][key3];       //アイテム名格納 Obj[][]でアイテム名指定
                     p[ide].textContent += keyObj[key2];          //祝福、封印、回数の格納
-                    Objchek.appendChild(p[ide]);                 //ｐタグ出力場所指定
-                    console.log(`${ide}`);
                   }
                 }
+                Objchek.appendChild(p[ide]);                 //ｐタグ出力場所指定
+                ide++;
               }
+              
             });
         }
       });
