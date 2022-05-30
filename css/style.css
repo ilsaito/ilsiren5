@@ -8,9 +8,11 @@ body {
   margin: 0;
   background-color: aqua;
 }
-p {
-  font-size:  24px;
-}
+/* p {
+  font-size:  16px;
+  padding: 0;
+  margin: 0;
+} */
 
 span {
   cursor: pointer;
@@ -98,18 +100,27 @@ main {
   justify-content: center;
   display: grid;
   grid-template:
-  ".... .... ..... .... ..... .... ...."
+  ".... .... ..... .... ..... .... ...." 
   ".... .... Nu0   .... b0    .... ...." 
+  ".... .... ..... .... ..... .... ...." 2px
   ".... dip0 dip0  dip0 dip0  dip0 ...." 
+  ".... .... ..... .... ..... .... ...." 2px
   ".... .... Nu1   .... b1    .... ...." 
+  ".... .... ..... .... ..... .... ...." 2px
   ".... dip1 dip1  dip1 dip1  dip1 ...." 
+  ".... .... ..... .... ..... .... ...." 2px
   ".... .... Nu2   .... b2    .... ...." 
+  ".... .... ..... .... ..... .... ...." 2px
   ".... dip2 dip2  dip2 dip2  dip2 ...." 
+  ".... .... ..... .... ..... .... ...." 2px
   ".... .... Nu3   .... b3    .... ...." 
+  ".... .... ..... .... ..... .... ...." 2px
   ".... dip3 dip3  dip3 dip3  dip3 ...." 
+  ".... .... ..... .... ..... .... ...." 2px
   ".... .... Nu4   .... b4    .... ...." 
+  ".... .... ..... .... ..... .... ...." 2px
   ".... dip4 dip4  dip4 dip4  dip4 ...." 
-  ".... .... ..... .... ..... .... ...."
+  ".... .... ..... .... ..... .... ...." 2px
   /10%  1fr  200px 4px  200px  1fr 10% ;
 }
 #number0{grid-area: Nu0;}#number1{grid-area: Nu1;}#number2{grid-area: Nu2;}
@@ -133,7 +144,21 @@ main {
   transition: .4s;
 }
 
-
+main .lei {
+  display: flex;
+  justify-content: center;
+  /* justify-content: space-between; */
+  flex-wrap: wrap;
+  align-content: flex-start;
+}
+main .lei p {
+  font-size: 18px;
+  padding: 2px;
+  margin: 2px;
+  background-color: royalblue;
+  border-radius: 3px;
+  transition: transform .3s;
+}
 
 /* carousel */
 /**/
@@ -259,9 +284,9 @@ footer {
 
 .ment li a {
   display: inline-block;
-  width: 100px;
+  width: auto;
   text-align: center;
-  padding: 8px 0;
+  padding: 4px 8px;
   columns: #333;
   text-decoration: none;
   border-radius: 8px 8px 0 0;

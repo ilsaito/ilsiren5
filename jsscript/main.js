@@ -275,9 +275,7 @@
   const keysObjName = Object.keys(keyObjName)   //オブジェクトキーを配列に変換
 
   const p = [];                                 //<p>生成
-  for (let i = 0;i <= 6;i++) {
-    p[i] = document.createElement("p");
-  };                                            //<p>生成
+  let ide = 0;                                  //初期化フラグ用変数
 
   const text = [];                                    //text[]取得（入力数値etc...）
   for (let i = 0;i <= 5;i++) {
@@ -299,6 +297,13 @@
   const divid2 = document.getElementById("div2");
   const divid3 = document.getElementById("div3");
   const divid4 = document.getElementById("div4");       //出力位置取得
+
+  const tyeck = [];                                  //chekboxの取得
+  for (let i = 0; i <= 173; i++){
+    tyeck[i] = document.getElementById(`tyeck${i}`);       //
+  }                                                        //chekboxの取得 
+
+
   //
   //////    ↓メソッド関数宣言↓    /////
   //
@@ -310,32 +315,39 @@
         }
     });
   }
-  function Datakeysan(e, data, Obj){//{e イベント} {data p[]、text[]のナンバー} {Obj オブジェクト名}
+  function Datakeysan(e, data, Obj, Objchek){//{e イベント} {data p[]、text[]のナンバー} {Obj オブジェクト名} {Objchek 表示チェック}
     e.preventDefault();
     const Objs = Object.keys(Obj);    //アイテムのオブジェクトを配列に変換
-    p[data].textContent = "";         //クリック時のｐ内テキストの初期化
+    if(ide > 0){
+      for (let i = 1; i <= ide; i++){
+        console.log(ide);
+        p[i].remove();       //ｐタグ初期化
+      }
+    }
+    ide = 0;           //初期化フラグ用変数
     Objs.forEach(key1 => {            //アイテムそれぞれの繰り返し
       keysObj.forEach(key2 => {       //アイテム内の祝福封印の繰り返し
         if (text[data].value === `${Obj[key1][key2]}`) {    //値段判定
-          keysObjName.forEach(key3 => {                     //アイテム名前の繰り返し
-            if(Obj[key1][key3] === undefined){}else{        //ナンバー無の振り落とし
-              p[data].textContent += "「";
-              p[data].textContent += Obj[key1][key3];       //アイテム名格納
-              p[data].textContent += "」";
-            }
-          });
-          SNurikai(key2, data);         //祝福封印のテキスト格納
+            keysObjName.forEach(key3 => {                     //アイテム名前の繰り返し
+              if(Obj[key1][key3] === undefined){} else {        //ナンバー無の振り落とし
+                ide++;
+                p[ide] = document.createElement("p");        //pタグ生成
+                for (let i = 0; i <= 173; i++){
+                  if(tyeck[i].checked){
+                  }else if(Obj[key1][key3] === tyeck[i].value){
+                    p[ide].textContent += Obj[key1][key3];       //アイテム名格納 Obj[][]でアイテム名指定
+                    p[ide].textContent += keyObj[key2];          //祝福、封印、回数の格納
+                    Objchek.appendChild(p[ide]);                 //ｐタグ出力場所指定
+                    console.log(`${ide}`);
+                  }
+                }
+              }
+            });
         }
       });
     });
   }
-  function Enterd(e){
-    Datakeysan(e, 0, iteme);
-    Datakeysan(e, 1, udewa);
-    Datakeysan(e, 2, makimono);
-    Datakeysan(e, 3, tubo);
-    Datakeysan(e, 4, tue);
-  }
+
   //carouselメソッド
   function updateButtons(){
     prev.classList.remove("hidden");
@@ -397,11 +409,11 @@
   /////     ↓メインクリックイベント↓      /////
   ////
 
-  bottton[0].addEventListener("click", e => Datakeysan(e, 0, iteme));
-  bottton[1].addEventListener("click", e => Datakeysan(e, 1, udewa));
-  bottton[2].addEventListener("click", e => Datakeysan(e, 2, makimono));
-  bottton[3].addEventListener("click", e => Datakeysan(e, 3, tubo));
-  bottton[4].addEventListener("click", e => Datakeysan(e, 4, tue));
+  bottton[0].addEventListener("click", e => Datakeysan(e, 0, iteme, divid0));
+  bottton[1].addEventListener("click", e => Datakeysan(e, 1, udewa, divid1));
+  bottton[2].addEventListener("click", e => Datakeysan(e, 2, makimono, divid2));
+  bottton[3].addEventListener("click", e => Datakeysan(e, 3, tubo, divid3));
+  bottton[4].addEventListener("click", e => Datakeysan(e, 4, tue, divid4));
   
 
   ///
@@ -413,27 +425,34 @@
       if(i === 10){
         outdate[i].addEventListener("click", () => {
           text[ie].value = "";
-          p[ie].textContent =""; });
+        });
       }else if(i === 11){
-        outdate[i].addEventListener("click", (e) => {Enterd(e);});          //メインクリックイベント全てクリックボタンイベント
+        outdate[i].addEventListener("click", (e) => Datakeysan(e, 0, iteme, divid0));          //メインクリックイベント全てクリックボタンイベント
       }else{
         outdate[i].addEventListener("click", () => {text[ie].value += i;}); //入力ボタンイベント
       }
     }
   }
- 
+
   ///
-  ////    ↓メイン↓      /////
-  divid0.appendChild(p[0]);
-  divid1.appendChild(p[1]);
-  divid2.appendChild(p[2]);
-  divid3.appendChild(p[3]);
-  divid4.appendChild(p[4]);
+  ////    ↓pの出力場所指定↓      /////
+  // divid0.appendChild(p[0]);
+  // divid1.appendChild(p[1]);
+  // divid2.appendChild(p[2]);
+  // divid3.appendChild(p[3]);
+  // divid4.appendChild(p[4]);
   ////      window.       ////
   window.addEventListener("resize", () => {
     moveSlides();
   });
   ////    ↑イベント↑    ////
+
+
+////
+// チェックボックス
+////
+// console.log(tyeck[0].value);
+// console.log(tyeck[0].checked);
 
 
 
