@@ -9,12 +9,12 @@
   <title>値段識別サイト風来のシレン5</title>
 </head>
 <body>
-<header class="gridh">
+<header class="gridh" id="headersa">
   <time id = "getday"></time>
   <div id = "hedp">風来のシレン５の値段識別補助サイト</div>
   <a href="#menu" id = "help">ヘルプ</a>
 </header>
-<section class="carousel">
+<section class="carousel" id="carouselsa">
     <div class="container">
       <ul>
         <li><img src="img/IMG_0669.PNG" alt="siren5"></li>
@@ -40,7 +40,7 @@
       <button id="d9" ontouchstart="">9</button>
       <button id="d11" ontouchstart="">ENTER</button>
     </div>
-  <main>
+  <main id="mainsa">
     <input type="number" name="値段入れ" id = "number0">
     <button id="button0" ontouchstart="">店主君、アイテムお願い！</button>
     <div id = "div0" class="lei"></div>
@@ -62,197 +62,371 @@
     <div id = "div4" class="lei"></div>
     
   </main>
-<aside>
+<aside id="asaidesa">
   <fieldset>
     <legend>草</legend>
-    <label><input type="checkbox" id="tyeck0" value="忌火起草">忌火起草</label>
-    <label><input type="checkbox" id="tyeck1" value="しあわせ草">しあわせ草</label>
-    <label><input type="checkbox" id="tyeck2" value="不幸の種">不幸の種</label>
-    <label><input type="checkbox" id="tyeck3" value="無敵草">無敵草</label>
-    <label><input type="checkbox" id="tyeck4" value="物忘れの草">物忘れの草</label>
-    <label><input type="checkbox" id="tyeck5" value="やりなおし草">やりなおし草</label>
-    <label><input type="checkbox" id="tyeck6" value="やりなおせ草">やりなおせ草</label>
-    <label><input type="checkbox" id="tyeck7" value="腹活の草">腹活の草</label>
-    <label><input type="checkbox" id="tyeck8" value="復活の草">復活の草</label>
-    <label><input type="checkbox" id="tyeck9" value="命の草">命の草</label>
-    <label><input type="checkbox" id="tyeck10" value ="狂戦士の種">狂戦士の種</label>
-    <label><input type="checkbox" id="tyeck11" value ="睡眠草">睡眠草</label>
-    <label><input type="checkbox" id="tyeck12" value ="ちからの草">ちからの草</label>
-    <label><input type="checkbox" id="tyeck13" value ="ドラコン草">ドラコン草</label>
-    <label><input type="checkbox" id="tyeck14" value ="ドラゴン草">ドラゴン草</label>
-    <label><input type="checkbox" id="tyeck15" value ="胃拡張の種">胃拡張の種</label>
-    <label><input type="checkbox" id="tyeck16" value ="胃縮小の種">胃縮小の種</label>
-    <label><input type="checkbox" id="tyeck17" value ="混乱草">混乱草</label>
-    <label><input type="checkbox" id="tyeck18" value ="すばやさ草">すばやさ草</label>
-    <label><input type="checkbox" id="tyeck19" value ="成長の種">成長の種</label>
-    <label><input type="checkbox" id="tyeck20" value ="ぬぐすり草">ぬぐすり草</label>
-    <label><input type="checkbox" id="tyeck21" value ="パワーアップ草">パワーアップ草</label>
-    <label><input type="checkbox" id="tyeck22" value ="めぐすり草">めぐすり草</label>
-    <label><input type="checkbox" id="tyeck23" value ="目つぶし草">目つぶし草</label>
-    <label><input type="checkbox" id="tyeck24" value ="いやし草">いやし草</label>
-    <label><input type="checkbox" id="tyeck25" value ="弟切草">弟切草</label>
-    <label><input type="checkbox" id="tyeck26" value ="高飛び草">高飛び草</label>
-    <label><input type="checkbox" id="tyeck27" value ="毒消し草">毒消し草</label>
-    <label><input type="checkbox" id="tyeck28" value ="毒草">毒草</label>
-    <label><input type="checkbox" id="tyeck29" value ="薬草">薬草</label>
-    <label><input type="checkbox" id="tyeck30" value ="楽草">楽草</label>
-    <label><input type="checkbox" id="tyeck31" value ="雑草">雑草</label>
+    <input type="checkbox" id="tyeck0" value="忌火起草">
+    <label for="tyeck0" >忌火起草</label>
+    <input type="checkbox" id="tyeck1" value="しあわせ草">
+    <label for="tyeck1" >しあわせ草</label>
+    <input type="checkbox" id="tyeck2" value="不幸の種">
+    <label for="tyeck2" >不幸の種</label>
+    <input type="checkbox" id="tyeck3" value="無敵草">
+    <label for="tyeck3" >無敵草</label>
+    <input type="checkbox" id="tyeck4" value="物忘れの草">
+    <label for="tyeck4" >物忘れの草</label>
+    <input type="checkbox" id="tyeck5" value="やりなおし草">
+    <label for="tyeck5" >やりなおし草</label>
+    <input type="checkbox" id="tyeck6" value="やりなおせ草">
+    <label for="tyeck6" >やりなおせ草</label>
+    <input type="checkbox" id="tyeck7" value="腹活の草">
+    <label for="tyeck7" >腹活の草</label>
+    <input type="checkbox" id="tyeck8" value="復活の草">
+    <label for="tyeck8" >復活の草</label>
+    <input type="checkbox" id="tyeck9" value="命の草">
+    <label for="tyeck9" >命の草</label>
+    <input type="checkbox" id="tyeck10" value ="狂戦士の種">
+    <label for="tyeck10">狂戦士の種</label>
+    <input type="checkbox" id="tyeck11" value ="睡眠草">
+    <label for="tyeck11">睡眠草</label>
+    <input type="checkbox" id="tyeck12" value ="ちからの草">
+    <label for="tyeck12">ちからの草</label>
+    <input type="checkbox" id="tyeck13" value ="ドラコン草">
+    <label for="tyeck13">ドラコン草</label>
+    <input type="checkbox" id="tyeck14" value ="ドラゴン草">
+    <label for="tyeck14">ドラゴン草</label>
+    <input type="checkbox" id="tyeck15" value ="胃拡張の種">
+    <label for="tyeck15">胃拡張の種</label>
+    <input type="checkbox" id="tyeck16" value ="胃縮小の種">
+    <label for="tyeck16">胃縮小の種</label>
+    <input type="checkbox" id="tyeck17" value ="混乱草">
+    <label for="tyeck17">混乱草</label>
+    <input type="checkbox" id="tyeck18" value ="すばやさ草">
+    <label for="tyeck18">すばやさ草</label>
+    <input type="checkbox" id="tyeck19" value ="成長の種">
+    <label for="tyeck19">成長の種</label>
+    <input type="checkbox" id="tyeck20" value ="ぬぐすり草">
+    <label for="tyeck20">ぬぐすり草</label>
+    <input type="checkbox" id="tyeck21" value ="パワーアップ草">
+    <label for="tyeck21">パワーアップ草</label>
+    <input type="checkbox" id="tyeck22" value ="めぐすり草">
+    <label for="tyeck22">めぐすり草</label>
+    <input type="checkbox" id="tyeck23" value ="目つぶし草">
+    <label for="tyeck23">目つぶし草</label>
+    <input type="checkbox" id="tyeck24" value ="いやし草">
+    <label for="tyeck24">いやし草</label>
+    <input type="checkbox" id="tyeck25" value ="弟切草">
+    <label for="tyeck25">弟切草</label>
+    <input type="checkbox" id="tyeck26" value ="高飛び草">
+    <label for="tyeck26">高飛び草</label>
+    <input type="checkbox" id="tyeck27" value ="毒消し草">
+    <label for="tyeck27">毒消し草</label>
+    <input type="checkbox" id="tyeck28" value ="毒草">
+    <label for="tyeck28">毒草</label>
+    <input type="checkbox" id="tyeck29" value ="薬草">
+    <label for="tyeck29">薬草</label>
+    <input type="checkbox" id="tyeck30" value ="楽草">
+    <label for="tyeck30">楽草</label>
+    <input type="checkbox" id="tyeck31" value ="雑草">
+    <label for="tyeck31">雑草</label>
   </fieldset>
   <fieldset>
     <legend>杖</legend>
-    <label><input type="checkbox" id="tyeck32" value="しあわせの杖">しあわせの杖</label>
-    <label><input type="checkbox" id="tyeck33" value="しわよせの杖">しわよせの杖</label>
-    <label><input type="checkbox" id="tyeck34" value="土塊の杖">土塊の杖</label>
-    <label><input type="checkbox" id="tyeck35" value="トンネルの杖">トンネルの杖</label>
-    <label><input type="checkbox" id="tyeck36" value="不幸の杖">不幸の杖</label>
-    <label><input type="checkbox" id="tyeck37" value="身伐わりの杖">身伐わりの杖</label>
-    <label><input type="checkbox" id="tyeck38" value="封印の杖">封印の杖</label>
-    <label><input type="checkbox" id="tyeck39" value="身代わりの杖">身代わりの杖</label>
-    <label><input type="checkbox" id="tyeck40" value="感電の杖">感電の杖</label>
-    <label><input type="checkbox" id="tyeck41" value="盛電の杖">盛電の杖</label>
-    <label><input type="checkbox" id="tyeck42" value="痛み分けの杖">痛み分けの杖</label>
-    <label><input type="checkbox" id="tyeck43" value="転ばぬ先の杖">転ばぬ先の杖</label>
-    <label><input type="checkbox" id="tyeck44" value="ただの杖">ただの杖</label>
-    <label><input type="checkbox" id="tyeck45" value="ワナ消しの杖">ワナ消しの杖</label>
-    <label><input type="checkbox" id="tyeck46" value="一時しのぎの杖">一時しのぎの杖</label>
-    <label><input type="checkbox" id="tyeck47" value="かなしばいの杖">かなしばいの杖</label>
-    <label><input type="checkbox" id="tyeck48" value="かなしばりの杖">かなしばりの杖</label>
-    <label><input type="checkbox" id="tyeck49" value="転ばぬ先生の杖">転ばぬ先生の杖</label>
-    <label><input type="checkbox" id="tyeck50" value="飛びつきの杖">飛びつきの杖</label>
-    <label><input type="checkbox" id="tyeck51" value="場所がえの杖">場所がえの杖</label>
-    <label><input type="checkbox" id="tyeck52" value="吹き飛ばしの杖">吹き飛ばしの杖</label>
-    <label><input type="checkbox" id="tyeck53" value="加速の杖">加速の杖</label>
-    <label><input type="checkbox" id="tyeck54" value="鈍足の杖">鈍足の杖</label>
+    <input type="checkbox" id="tyeck32" value="しあわせの杖">
+    <label for="tyeck32">しあわせの杖</label>
+    <input type="checkbox" id="tyeck33" value="しわよせの杖">
+    <label for="tyeck33">しわよせの杖</label>
+    <input type="checkbox" id="tyeck34" value="土塊の杖">
+    <label for="tyeck34">土塊の杖</label>
+    <input type="checkbox" id="tyeck35" value="トンネルの杖">
+    <label for="tyeck35">トンネルの杖</label>
+    <input type="checkbox" id="tyeck36" value="不幸の杖">
+    <label for="tyeck36">不幸の杖</label>
+    <input type="checkbox" id="tyeck37" value="身伐わりの杖">
+    <label for="tyeck37">身伐わりの杖</label>
+    <input type="checkbox" id="tyeck38" value="封印の杖">
+    <label for="tyeck38">封印の杖</label>
+    <input type="checkbox" id="tyeck39" value="身代わりの杖">
+    <label for="tyeck39">身代わりの杖</label>
+    <input type="checkbox" id="tyeck40" value="感電の杖">
+    <label for="tyeck40">感電の杖</label>
+    <input type="checkbox" id="tyeck41" value="盛電の杖">
+    <label for="tyeck41">盛電の杖</label>
+    <input type="checkbox" id="tyeck42" value="痛み分けの杖">
+    <label for="tyeck42">痛み分けの杖</label>
+    <input type="checkbox" id="tyeck43" value="転ばぬ先の杖">
+    <label for="tyeck43">転ばぬ先の杖</label>
+    <input type="checkbox" id="tyeck44" value="ただの杖">
+    <label for="tyeck44">ただの杖</label>
+    <input type="checkbox" id="tyeck45" value="ワナ消しの杖">
+    <label for="tyeck45">ワナ消しの杖</label>
+    <input type="checkbox" id="tyeck46" value="一時しのぎの杖">
+    <label for="tyeck46">一時しのぎの杖</label>
+    <input type="checkbox" id="tyeck47" value="かなしばいの杖">
+    <label for="tyeck47">かなしばいの杖</label>
+    <input type="checkbox" id="tyeck48" value="かなしばりの杖">
+    <label for="tyeck48">かなしばりの杖</label>
+    <input type="checkbox" id="tyeck49" value="転ばぬ先生の杖">
+    <label for="tyeck49">転ばぬ先生の杖</label>
+    <input type="checkbox" id="tyeck50" value="飛びつきの杖">
+    <label for="tyeck50">飛びつきの杖</label>
+    <input type="checkbox" id="tyeck51" value="場所がえの杖">
+    <label for="tyeck51">場所がえの杖</label>
+    <input type="checkbox" id="tyeck52" value="吹き飛ばしの杖">
+    <label for="tyeck52">吹き飛ばしの杖</label>
+    <input type="checkbox" id="tyeck53" value="加速の杖">
+    <label for="tyeck53">加速の杖</label>
+    <input type="checkbox" id="tyeck54" value="鈍足の杖">
+    <label for="tyeck54">鈍足の杖</label>
   </fieldset>
   <fieldset>
       <legend>巻物</legend>
-      <label><input type="checkbox" id="tyeck55" value="ねだやしの巻物">ねだやしの巻物</label>
-      <label><input type="checkbox" id="tyeck56" value="白紙の巻物">白紙の巻物</label>
-      <label><input type="checkbox" id="tyeck57" value="金滅の巻物">金滅の巻物</label>
-      <label><input type="checkbox" id="tyeck58" value="聖域の巻物">聖域の巻物</label>
-      <label><input type="checkbox" id="tyeck59" value="全滅の巻物">全滅の巻物</label>
-      <label><input type="checkbox" id="tyeck60" value="迷子の巻物">迷子の巻物</label>
-      <label><input type="checkbox" id="tyeck61" value="枝回復の巻物">枝回復の巻物</label>
-      <label><input type="checkbox" id="tyeck62" value="オーラ消しの巻物">オーラ消しの巻物</label>
-      <label><input type="checkbox" id="tyeck63" value="国った時の巻物">国った時の巻物</label>
-      <label><input type="checkbox" id="tyeck64" value="困った時の巻物">困った時の巻物</label>
-      <label><input type="checkbox" id="tyeck65" value="混乱の巻物">混乱の巻物</label>
-      <label><input type="checkbox" id="tyeck66" value="真空斬りの巻物">真空斬りの巻物</label>
-      <label><input type="checkbox" id="tyeck67" value="昼夜の巻物">昼夜の巻物</label>
-      <label><input type="checkbox" id="tyeck68" value="敵加速の巻物">敵加速の巻物</label>
-      <label><input type="checkbox" id="tyeck69" value="バクスイの巻物">バクスイの巻物</label>
-      <label><input type="checkbox" id="tyeck70" value="バクチの巻物">バクチの巻物</label>
-      <label><input type="checkbox" id="tyeck71" value="魔物部屋の巻物">魔物部屋の巻物</label>
-      <label><input type="checkbox" id="tyeck72" value="予防の巻物">予防の巻物</label>
-      <label><input type="checkbox" id="tyeck73" value="技回復の巻物">技回復の巻物</label>
-      <label><input type="checkbox" id="tyeck74" value="くちなしの巻物">くちなしの巻物</label>
-      <label><input type="checkbox" id="tyeck75" value="ゾワゾワの巻物">ゾワゾワの巻物</label>
-      <label><input type="checkbox" id="tyeck76" value="ひきよせの巻物">ひきよせの巻物</label>
-      <label><input type="checkbox" id="tyeck77" value="拾えずの巻物">拾えずの巻物</label>
-      <label><input type="checkbox" id="tyeck78" value="水がれの巻物">水がれの巻物</label>
-      <label><input type="checkbox" id="tyeck79" value="ワナ消しの巻物">ワナ消しの巻物</label>
-      <label><input type="checkbox" id="tyeck80" value="ワナの巻物">ワナの巻物</label>
-      <label><input type="checkbox" id="tyeck81" value="夫の恵みの巻物">夫の恵みの巻物</label>
-      <label><input type="checkbox" id="tyeck82" value="おにぎりの巻物">おにぎりの巻物</label>
-      <label><input type="checkbox" id="tyeck83" value="おはらいの巻物">おはらいの巻物</label>
-      <label><input type="checkbox" id="tyeck84" value="換金の巻物">換金の巻物</label>
-      <label><input type="checkbox" id="tyeck85" value="祝福の巻物">祝福の巻物</label>
-      <label><input type="checkbox" id="tyeck86" value="吸い出しの巻物">吸い出しの巻物</label>
-      <label><input type="checkbox" id="tyeck87" value="タグの巻物">タグの巻物</label>
-      <label><input type="checkbox" id="tyeck88" value="たたりの巻物">たたりの巻物</label>
-      <label><input type="checkbox" id="tyeck89" value="タダの巻物">タダの巻物</label>
-      <label><input type="checkbox" id="tyeck90" value="他の恵みの巻物">他の恵みの巻物</label>
-      <label><input type="checkbox" id="tyeck91" value="地の恵みの巻物">地の恵みの巻物</label>
-      <label><input type="checkbox" id="tyeck92" value="壺増犬の巻物">壺増犬の巻物</label>
-      <label><input type="checkbox" id="tyeck93" value="壺増大の巻物">壺増大の巻物</label>
-      <label><input type="checkbox" id="tyeck94" value="天の恵みの巻物">天の恵みの巻物</label>
-      <label><input type="checkbox" id="tyeck95" value="メッキの巻物">メッキの巻物</label>
-      <label><input type="checkbox" id="tyeck96" value="いかすしの巻物">いかすしの巻物</label>
-      <label><input type="checkbox" id="tyeck97" value="集合の巻物">集合の巻物</label>
-      <label><input type="checkbox" id="tyeck98" value="道具寄せの巻物">道具寄せの巻物</label>
-      <label><input type="checkbox" id="tyeck99" value="識別の巻物">識別の巻物</label>
-      <label><input type="checkbox" id="tyeck100" value="あかりの巻物">あかりの巻物</label>
-      <label><input type="checkbox" id="tyeck101" value="オイルの巻物">オイルの巻物</label>
-      <label><input type="checkbox" id="tyeck102" value="紹介状">紹介状</label>
-      <label><input type="checkbox" id="tyeck103" value="召介状">召介状</label>
-      <label><input type="checkbox" id="tyeck104" value="脱出の巻物">脱出の巻物</label>
-      <label><input type="checkbox" id="tyeck105" value="光の巻物">光の巻物</label>
-      <label><input type="checkbox" id="tyeck106" value="ただの紙切れ">ただの紙切れ</label>
-      <label><input type="checkbox" id="tyeck107" value="ぬれた巻物">ぬれた巻物</label>
+      <input type="checkbox" id="tyeck55" value="ねだやしの巻物">
+      <label for ="tyeck55">ねだやしの巻物</label>
+      <input type="checkbox" id="tyeck56" value="白紙の巻物">
+      <label for ="tyeck56">白紙の巻物</label>
+      <input type="checkbox" id="tyeck57" value="金滅の巻物">
+      <label for ="tyeck57">金滅の巻物</label>
+      <input type="checkbox" id="tyeck58" value="聖域の巻物">
+      <label for ="tyeck58">聖域の巻物</label>
+      <input type="checkbox" id="tyeck59" value="全滅の巻物">
+      <label for ="tyeck59">全滅の巻物</label>
+      <input type="checkbox" id="tyeck60" value="迷子の巻物">
+      <label for ="tyeck60">迷子の巻物</label>
+      <input type="checkbox" id="tyeck61" value="枝回復の巻物">
+      <label for ="tyeck61">枝回復の巻物</label>
+      <input type="checkbox" id="tyeck62" value="オーラ消しの巻物">
+      <label for ="tyeck62">オーラ消しの巻物</label>
+      <input type="checkbox" id="tyeck63" value="国った時の巻物">
+      <label for ="tyeck63">国った時の巻物</label>
+      <input type="checkbox" id="tyeck64" value="困った時の巻物">
+      <label for ="tyeck64">困った時の巻物</label>
+      <input type="checkbox" id="tyeck65" value="混乱の巻物">
+      <label for ="tyeck65">混乱の巻物</label>
+      <input type="checkbox" id="tyeck66" value="真空斬りの巻物">
+      <label for ="tyeck66">真空斬りの巻物</label>
+      <input type="checkbox" id="tyeck67" value="昼夜の巻物">
+      <label for ="tyeck67">昼夜の巻物</label>
+      <input type="checkbox" id="tyeck68" value="敵加速の巻物">
+      <label for ="tyeck68">敵加速の巻物</label>
+      <input type="checkbox" id="tyeck69" value="バクスイの巻物">
+      <label for ="tyeck69">バクスイの巻物</label>
+      <input type="checkbox" id="tyeck70" value="バクチの巻物">
+      <label for ="tyeck70">バクチの巻物</label>
+      <input type="checkbox" id="tyeck71" value="魔物部屋の巻物">
+      <label for ="tyeck71">魔物部屋の巻物</label>
+      <input type="checkbox" id="tyeck72" value="予防の巻物">
+      <label for ="tyeck72">予防の巻物</label>
+      <input type="checkbox" id="tyeck73" value="技回復の巻物">
+      <label for ="tyeck73">技回復の巻物</label>
+      <input type="checkbox" id="tyeck74" value="くちなしの巻物">
+      <label for ="tyeck74">くちなしの巻物</label>
+      <input type="checkbox" id="tyeck75" value="ゾワゾワの巻物">
+      <label for ="tyeck75">ゾワゾワの巻物</label>
+      <input type="checkbox" id="tyeck76" value="ひきよせの巻物">
+      <label for ="tyeck76">ひきよせの巻物</label>
+      <input type="checkbox" id="tyeck77" value="拾えずの巻物">
+      <label for ="tyeck77">拾えずの巻物</label>
+      <input type="checkbox" id="tyeck78" value="水がれの巻物">
+      <label for ="tyeck78">水がれの巻物</label>
+      <input type="checkbox" id="tyeck79" value="ワナ消しの巻物">
+      <label for ="tyeck79">ワナ消しの巻物</label>
+      <input type="checkbox" id="tyeck80" value="ワナの巻物">
+      <label for ="tyeck80">ワナの巻物</label>
+      <input type="checkbox" id="tyeck81" value="夫の恵みの巻物">
+      <label for ="tyeck81">夫の恵みの巻物</label>
+      <input type="checkbox" id="tyeck82" value="おにぎりの巻物">
+      <label for ="tyeck82">おにぎりの巻物</label>
+      <input type="checkbox" id="tyeck83" value="おはらいの巻物">
+      <label for ="tyeck83">おはらいの巻物</label>
+      <input type="checkbox" id="tyeck84" value="換金の巻物">
+      <label for ="tyeck84">換金の巻物</label>
+      <input type="checkbox" id="tyeck85" value="祝福の巻物">
+      <label for ="tyeck85">祝福の巻物</label>
+      <input type="checkbox" id="tyeck86" value="吸い出しの巻物">
+      <label for ="tyeck86">吸い出しの巻物</label>
+      <input type="checkbox" id="tyeck87" value="タグの巻物">
+      <label for ="tyeck87">タグの巻物</label>
+      <input type="checkbox" id="tyeck88" value="たたりの巻物">
+      <label for ="tyeck88">たたりの巻物</label>
+      <input type="checkbox" id="tyeck89" value="タダの巻物">
+      <label for ="tyeck89">タダの巻物</label>
+      <input type="checkbox" id="tyeck90" value="他の恵みの巻物">
+      <label for ="tyeck90">他の恵みの巻物</label>
+      <input type="checkbox" id="tyeck91" value="地の恵みの巻物">
+      <label for ="tyeck91">地の恵みの巻物</label>
+      <input type="checkbox" id="tyeck92" value="壺増犬の巻物">
+      <label for ="tyeck92">壺増犬の巻物</label>
+      <input type="checkbox" id="tyeck93" value="壺増大の巻物">
+      <label for ="tyeck93">壺増大の巻物</label>
+      <input type="checkbox" id="tyeck94" value="天の恵みの巻物">
+      <label for ="tyeck94">天の恵みの巻物</label>
+      <input type="checkbox" id="tyeck95" value="メッキの巻物">
+      <label for ="tyeck95">メッキの巻物</label>
+      <input type="checkbox" id="tyeck96" value="いかすしの巻物">
+      <label for ="tyeck96">いかすしの巻物</label>
+      <input type="checkbox" id="tyeck97" value="集合の巻物">
+      <label for ="tyeck97">集合の巻物</label>
+      <input type="checkbox" id="tyeck98" value="道具寄せの巻物">
+      <label for ="tyeck98">道具寄せの巻物</label>
+      <input type="checkbox" id="tyeck99" value="識別の巻物">
+      <label for ="tyeck99">識別の巻物</label>
+      <input type="checkbox" id="tyeck100" value="あかりの巻物">
+      <label for ="tyeck100">あかりの巻物</label>
+      <input type="checkbox" id="tyeck101" value="オイルの巻物">
+      <label for ="tyeck101">オイルの巻物</label>
+      <input type="checkbox" id="tyeck102" value="紹介状">
+      <label for ="tyeck102">紹介状</label>
+      <input type="checkbox" id="tyeck103" value="召介状">
+      <label for ="tyeck103">召介状</label>
+      <input type="checkbox" id="tyeck104" value="脱出の巻物">
+      <label for ="tyeck104">脱出の巻物</label>
+      <input type="checkbox" id="tyeck105" value="光の巻物">
+      <label for ="tyeck105">光の巻物</label>
+      <input type="checkbox" id="tyeck106" value="ただの紙切れ">
+      <label for ="tyeck106">ただの紙切れ</label>
+      <input type="checkbox" id="tyeck107" value="ぬれた巻物">
+      <label for ="tyeck107">ぬれた巻物</label>
 
   </fieldset>
   <fieldset>
       <legend>腕輪</legend>
-      <label><input type="checkbox" id="tyeck108" value="IP腕輪">VIP腕輪</label>
-      <label><input type="checkbox" id="tyeck109" value="定師の腕輪">鑑定師の腕輪</label>
-      <label><input type="checkbox" id="tyeck110" value="視の腕輪">透視の腕輪</label>
-      <label><input type="checkbox" id="tyeck111" value="タギの腕輪">マタギの腕輪</label>
-      <label><input type="checkbox" id="tyeck112" value="心の腕輪">無心の腕輪</label>
-      <label><input type="checkbox" id="tyeck113" value="あわせの腕輪">しあわせの腕輪</label>
-      <label><input type="checkbox" id="tyeck114" value="たたずの腕輪">時たたずの腕輪</label>
-      <label><input type="checkbox" id="tyeck115" value="きよけの腕輪">弾きよけの腕輪</label>
-      <label><input type="checkbox" id="tyeck116" value="遊の腕輪">浮遊の腕輪</label>
-      <label><input type="checkbox" id="tyeck117" value="道の腕輪">裏道の腕輪</label>
-      <label><input type="checkbox" id="tyeck118" value="回復の腕輪">回復の腕輪</label>
-      <label><input type="checkbox" id="tyeck119" value="壁抜けの腕輪">壁抜けの腕輪</label>
-      <label><input type="checkbox" id="tyeck120" value="気配察知の腕輪">気配察知の腕輪</label>
-      <label><input type="checkbox" id="tyeck121" value="気配察血の腕輪">気配察血の腕輪</label>
-      <label><input type="checkbox" id="tyeck122" value="高飛びの腕輪">高飛びの腕輪</label>
-      <label><input type="checkbox" id="tyeck123" value="道具感知の腕輪">道具感知の腕輪</label>
-      <label><input type="checkbox" id="tyeck124" value="道具感血の腕輪">道具感血の腕輪</label>
-      <label><input type="checkbox" id="tyeck125" value="ノナリーの腕輪">ノナリーの腕輪</label>
-      <label><input type="checkbox" id="tyeck126" value="爆発の腕輪">爆発の腕輪</label>
-      <label><input type="checkbox" id="tyeck127" value="水グモの腕輪">水グモの腕輪</label>
-      <label><input type="checkbox" id="tyeck128" value="混乱よけの腕輪">混乱よけの腕輪</label>
-      <label><input type="checkbox" id="tyeck129" value="睡眠よけの腕輪">睡眠よけの腕輪</label>
-      <label><input type="checkbox" id="tyeck130" value="痛恨の腕輪">痛恨の腕輪</label>
-      <label><input type="checkbox" id="tyeck131" value="透ネ見の腕輪">透ネ見の腕輪</label>
-      <label><input type="checkbox" id="tyeck132" value="毒消しの腕輪">毒消しの腕輪</label>
-      <label><input type="checkbox" id="tyeck133" value="呪いよけの腕輪">呪いよけの腕輪</label>
-      <label><input type="checkbox" id="tyeck134" value="保持の腕輪">保持の腕輪</label>
-      <label><input type="checkbox" id="tyeck135" value="呪い師の腕輪">呪い師の腕輪</label>
-      <label><input type="checkbox" id="tyeck136" value="魔物呼びの腕輪">魔物呼びの腕輪</label>
-      <label><input type="checkbox" id="tyeck137" value="ワナの腕輪">ワナの腕輪</label>
-      <label><input type="checkbox" id="tyeck138" value="ちからの腕輪">ちからの腕輪</label>
-      <label><input type="checkbox" id="tyeck139" value="武器束ねの腕輪">武器束ねの腕輪</label>
-      <label><input type="checkbox" id="tyeck140" value="ヘタ投げの腕輪">ヘタ投げの腕輪</label>
+      <input type="checkbox" id="tyeck108" value="IP腕輪">
+      <label for="tyeck108">VIP腕輪</label>
+      <input type="checkbox" id="tyeck109" value="定師の腕輪">
+      <label for="tyeck109">鑑定師の腕輪</label>
+      <input type="checkbox" id="tyeck110" value="視の腕輪">
+      <label for="tyeck110">透視の腕輪</label>
+      <input type="checkbox" id="tyeck111" value="タギの腕輪">
+      <label for="tyeck111">マタギの腕輪</label>
+      <input type="checkbox" id="tyeck112" value="心の腕輪">
+      <label for="tyeck112">無心の腕輪</label>
+      <input type="checkbox" id="tyeck113" value="あわせの腕輪">
+      <label for="tyeck113">しあわせの腕輪</label>
+      <input type="checkbox" id="tyeck114" value="たたずの腕輪">
+      <label for="tyeck114">時たたずの腕輪</label>
+      <input type="checkbox" id="tyeck115" value="きよけの腕輪">
+      <label for="tyeck115">弾きよけの腕輪</label>
+      <input type="checkbox" id="tyeck116" value="遊の腕輪">
+      <label for="tyeck116">浮遊の腕輪</label>
+      <input type="checkbox" id="tyeck117" value="道の腕輪">
+      <label for="tyeck117">裏道の腕輪</label>
+      <input type="checkbox" id="tyeck118" value="回復の腕輪">
+      <label for="tyeck118">回復の腕輪</label>
+      <input type="checkbox" id="tyeck119" value="壁抜けの腕輪">
+      <label for="tyeck119">壁抜けの腕輪</label>
+      <input type="checkbox" id="tyeck120" value="気配察知の腕輪">
+      <label for="tyeck120">気配察知の腕輪</label>
+      <input type="checkbox" id="tyeck121" value="気配察血の腕輪">
+      <label for="tyeck121">気配察血の腕輪</label>
+      <input type="checkbox" id="tyeck122" value="高飛びの腕輪">
+      <label for="tyeck122">高飛びの腕輪</label>
+      <input type="checkbox" id="tyeck123" value="道具感知の腕輪">
+      <label for="tyeck123">道具感知の腕輪</label>
+      <input type="checkbox" id="tyeck124" value="道具感血の腕輪">
+      <label for="tyeck124">道具感血の腕輪</label>
+      <input type="checkbox" id="tyeck125" value="ノナリーの腕輪">
+      <label for="tyeck125">ノナリーの腕輪</label>
+      <input type="checkbox" id="tyeck126" value="爆発の腕輪">
+      <label for="tyeck126">爆発の腕輪</label>
+      <input type="checkbox" id="tyeck127" value="水グモの腕輪">
+      <label for="tyeck127">水グモの腕輪</label>
+      <input type="checkbox" id="tyeck128" value="混乱よけの腕輪">
+      <label for="tyeck128">混乱よけの腕輪</label>
+      <input type="checkbox" id="tyeck129" value="睡眠よけの腕輪">
+      <label for="tyeck129">睡眠よけの腕輪</label>
+      <input type="checkbox" id="tyeck130" value="痛恨の腕輪">
+      <label for="tyeck130">痛恨の腕輪</label>
+      <input type="checkbox" id="tyeck131" value="透ネ見の腕輪">
+      <label for="tyeck131">透ネ見の腕輪</label>
+      <input type="checkbox" id="tyeck132" value="毒消しの腕輪">
+      <label for="tyeck132">毒消しの腕輪</label>
+      <input type="checkbox" id="tyeck133" value="呪いよけの腕輪">
+      <label for="tyeck133">呪いよけの腕輪</label>
+      <input type="checkbox" id="tyeck134" value="保持の腕輪">
+      <label for="tyeck134">保持の腕輪</label>
+      <input type="checkbox" id="tyeck135" value="呪い師の腕輪">
+      <label for="tyeck135">呪い師の腕輪</label>
+      <input type="checkbox" id="tyeck136" value="魔物呼びの腕輪">
+      <label for="tyeck136">魔物呼びの腕輪</label>
+      <input type="checkbox" id="tyeck137" value="ワナの腕輪">
+      <label for="tyeck137">ワナの腕輪</label>
+      <input type="checkbox" id="tyeck138" value="ちからの腕輪">
+      <label for="tyeck138">ちからの腕輪</label>
+      <input type="checkbox" id="tyeck139" value="武器束ねの腕輪">
+      <label for="tyeck139">武器束ねの腕輪</label>
+      <input type="checkbox" id="tyeck140" value="ヘタ投げの腕輪">
+      <label for="tyeck140">ヘタ投げの腕輪</label>
 
   </fieldset>
   <fieldset>
       <legend>壺</legend>
-      <label><input type="checkbox" id="tyeck141" value="強イヒの壺">強イヒの壺</label>
-      <label><input type="checkbox" id="tyeck142" value="福寄せの壺">福寄せの壺</label>
-      <label><input type="checkbox" id="tyeck143" value="厄寄せの壺">厄寄せの壺</label>
-      <label><input type="checkbox" id="tyeck144" value="強化の壺">強化の壺</label>
-      <label><input type="checkbox" id="tyeck145" value="弱化の壺">弱化の壺</label>
-      <label><input type="checkbox" id="tyeck146" value="合成の壺">合成の壺</label>
-      <label><input type="checkbox" id="tyeck147" value="クラインの壺">クラインの壺</label>
-      <label><input type="checkbox" id="tyeck148" value="背中の壺">背中の壺</label>
-      <label><input type="checkbox" id="tyeck149" value="トドの壺">トドの壺</label>
-      <label><input type="checkbox" id="tyeck150" value="魔物の壺">魔物の壺</label>
-      <label><input type="checkbox" id="tyeck151" value="笑いの壺">笑いの壺</label>
-      <label><input type="checkbox" id="tyeck152" value="乙女の祈りの壺">乙女の祈りの壺</label>
-      <label><input type="checkbox" id="tyeck153" value="冷えびえ香の壺">冷えびえ香の壺</label>
-      <label><input type="checkbox" id="tyeck154" value="身かわし香の壺">身かわし香の壺</label>
-      <label><input type="checkbox" id="tyeck155" value="目配り香の壺">目配り香の壺</label>
-      <label><input type="checkbox" id="tyeck156" value="山彦香の壺">山彦香の壺</label>
-      <label><input type="checkbox" id="tyeck157" value="水がめ">水がめ</label>
-      <label><input type="checkbox" id="tyeck158" value="乙女の祈りの壺">乙女の祈りの壺</label>
-      <label><input type="checkbox" id="tyeck159" value="おはらいの壺">おはらいの壺</label>
-      <label><input type="checkbox" id="tyeck160" value="祝福の壺">祝福の壺</label>
-      <label><input type="checkbox" id="tyeck161" value="たたりの壺">たたりの壺</label>
-      <label><input type="checkbox" id="tyeck162" value="換金の壺">換金の壺</label>
-      <label><input type="checkbox" id="tyeck163" value="手封じの壺">手封じの壺</label>
-      <label><input type="checkbox" id="tyeck164" value="フィーバーの壺">フィーバーの壺</label>
-      <label><input type="checkbox" id="tyeck165" value="変化の壺">変化の壺</label>
-      <label><input type="checkbox" id="tyeck166" value="変花の壺">変花の壺</label>
-      <label><input type="checkbox" id="tyeck167" value="割れない壺">割れない壺</label>
-      <label><input type="checkbox" id="tyeck168" value="底抜けの壺">底抜けの壺</label>
-      <label><input type="checkbox" id="tyeck169" value="識別の壺">識別の壺</label>
-      <label><input type="checkbox" id="tyeck170" value="ただの壺">ただの壺</label>
-      <label><input type="checkbox" id="tyeck171" value="保存の壺">保存の壺</label>
-      <label><input type="checkbox" id="tyeck172" value="やりすごしの壺">やりすごしの壺</label>
-      <label><input type="checkbox" id="tyeck173" value="四二鉢">四二鉢</label>
+      <input type="checkbox" id="tyeck141" value="強イヒの壺">
+      <label for="tyeck141">強イヒの壺</label>
+      <input type="checkbox" id="tyeck142" value="福寄せの壺">
+      <label for="tyeck142">福寄せの壺</label>
+      <input type="checkbox" id="tyeck143" value="厄寄せの壺">
+      <label for="tyeck143">厄寄せの壺</label>
+      <input type="checkbox" id="tyeck144" value="強化の壺">
+      <label for="tyeck144">強化の壺</label>
+      <input type="checkbox" id="tyeck145" value="弱化の壺">
+      <label for="tyeck145">弱化の壺</label>
+      <input type="checkbox" id="tyeck146" value="合成の壺">
+      <label for="tyeck146">合成の壺</label>
+      <input type="checkbox" id="tyeck147" value="クラインの壺">
+      <label for="tyeck147">クラインの壺</label>
+      <input type="checkbox" id="tyeck148" value="背中の壺">
+      <label for="tyeck148">背中の壺</label>
+      <input type="checkbox" id="tyeck149" value="トドの壺">
+      <label for="tyeck149">トドの壺</label>
+      <input type="checkbox" id="tyeck150" value="魔物の壺">
+      <label for="tyeck150">魔物の壺</label>
+      <input type="checkbox" id="tyeck151" value="笑いの壺">
+      <label for="tyeck151">笑いの壺</label>
+      <input type="checkbox" id="tyeck152" value="乙女の祈りの壺">
+      <label for="tyeck152">乙女の祈りの壺</label>
+      <input type="checkbox" id="tyeck153" value="冷えびえ香の壺">
+      <label for="tyeck153">冷えびえ香の壺</label>
+      <input type="checkbox" id="tyeck154" value="身かわし香の壺">
+      <label for="tyeck154">身かわし香の壺</label>
+      <input type="checkbox" id="tyeck155" value="目配り香の壺">
+      <label for="tyeck155">目配り香の壺</label>
+      <input type="checkbox" id="tyeck156" value="山彦香の壺">
+      <label for="tyeck156">山彦香の壺</label>
+      <input type="checkbox" id="tyeck157" value="水がめ">
+      <label for="tyeck157">水がめ</label>
+      <input type="checkbox" id="tyeck158" value="乙女の祈りの壺">
+      <label for="tyeck158">乙女の祈りの壺</label>
+      <input type="checkbox" id="tyeck159" value="おはらいの壺">
+      <label for="tyeck159">おはらいの壺</label>
+      <input type="checkbox" id="tyeck160" value="祝福の壺">
+      <label for="tyeck160">祝福の壺</label>
+      <input type="checkbox" id="tyeck161" value="たたりの壺">
+      <label for="tyeck161">たたりの壺</label>
+      <input type="checkbox" id="tyeck162" value="換金の壺">
+      <label for="tyeck162">換金の壺</label>
+      <input type="checkbox" id="tyeck163" value="手封じの壺">
+      <label for="tyeck163">手封じの壺</label>
+      <input type="checkbox" id="tyeck164" value="フィーバーの壺">
+      <label for="tyeck164">フィーバーの壺</label>
+      <input type="checkbox" id="tyeck165" value="変化の壺">
+      <label for="tyeck165">変化の壺</label>
+      <input type="checkbox" id="tyeck166" value="変花の壺">
+      <label for="tyeck166">変花の壺</label>
+      <input type="checkbox" id="tyeck167" value="割れない壺">
+      <label for="tyeck167">割れない壺</label>
+      <input type="checkbox" id="tyeck168" value="底抜けの壺">
+      <label for="tyeck168">底抜けの壺</label>
+      <input type="checkbox" id="tyeck169" value="識別の壺">
+      <label for="tyeck169">識別の壺</label>
+      <input type="checkbox" id="tyeck170" value="ただの壺">
+      <label for="tyeck170">ただの壺</label>
+      <input type="checkbox" id="tyeck171" value="保存の壺">
+      <label for="tyeck171">保存の壺</label>
+      <input type="checkbox" id="tyeck172" value="やりすごしの壺">
+      <label for="tyeck172">やりすごしの壺</label>
+      <input type="checkbox" id="tyeck173" value="四二鉢">
+      <label for="tyeck173">四二鉢</label>
   </fieldset>
 
 </aside>

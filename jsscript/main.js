@@ -331,10 +331,12 @@
               if(Obj[key1][key3] === undefined){} else {        //ナンバー無の振り落とし
                 p[ide] = document.createElement("p");        //pタグ生成
                 p[ide].textContent += Obj[key1][key3];       //アイテム名格納 Obj[][]でアイテム名指定
+                p[ide].textContent += keyObj[key2];          //祝福、封印、回数の格納
                 for (let i = 0; i <= 173; i++){
-                  if(tyeck[i].checked){
+                  if(tyeck[i].checked === false){
                   }else if(Obj[key1][key3] === tyeck[i].value){
-                    p[ide].textContent += keyObj[key2];          //祝福、封印、回数の格納
+                    console.log(i);
+                    p[ide].className = "my-color";
                   }
                 }
                 Objchek.appendChild(p[ide]);                 //ｐタグ出力場所指定

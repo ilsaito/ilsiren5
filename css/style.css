@@ -160,6 +160,33 @@ main .lei p {
   transition: transform .3s;
 }
 
+.my-color{
+  color: red;
+}
+/*  */
+/* checkbox */
+/*  */
+input[type=checkbox] {
+  display: none; /* checkboxを非表示にする */
+}
+
+input[type="checkbox"]:checked + label {
+  background: #31A9EE;/* マウス選択時の背景色を指定する */
+  color: #ffffff; /* マウス選択時のフォント色を指定する */
+  }
+
+label {
+  margin: 1px; /* ラベル外側の余白を指定する */
+  border: 2px solid #006DD9;/* ラベルの境界線を実線で指定する */
+  display: inline-block;
+  text-align: center;
+  line-height: 33px;
+  padding: 0 5px 0 5px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+
 /* carousel */
 /**/
 .carousel {
