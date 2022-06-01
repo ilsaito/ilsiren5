@@ -40,27 +40,39 @@ header{
 /*  */
 
 .gridh{
-  background-color: rgb(41, 15, 0);
+  background-color: #333;
   display: grid;
-  grid-template:
-  "... ..... ... .... ... .... ... ...... ..." 5%
-  "... time  ... .... ... .... ... ...... ..." 12px
-  "... ..... ... bush ... tue  ... maki   ..." 5%
-  "... ..... ... bush ... tue  ... maki   ..." 12px 
-  "... hed   ... .... ... .... ... ...... ..." 10%
-  "... hed   ... ude  ... tubo ... helps  ..." 12px
-  "... hed   ... .... ... .... ... ...... ..." 24px
-  "... ..... ... .... ... .... ... ...... ..." 
-  /4px 1fr   4px auto 8px auto 8px auto   12px;
+  grid-template: 
+  ".... ..... ... ...... ...." 1px
+  ".... time  ... ...... ...." 12px
+  ".... ..... ... ...... ...." 5px
+  ".... hed   ... navi   ...." 48px
+  ".... ..... ... ...... ...." 5px
+  /4px  auto 4px auto 4px;
 }
 #getday{grid-area: time; font-size: 4px; color: #999;}
 #hedp  {grid-area: hed;  font-size: 28px; color: rgb(255, 255, 255); white-space: nowrap}
+#navi  {grid-area: navi;}
+.navis{
+  display: grid;
+  grid-template: 
+  ".... ..... ... ..... ... ..... ..." 
+  ".... bush  ... tue   ... tubo  ..." 
+  ".... ..... ... ..... ... ..... ..." 
+  ".... maki  ... ude   ... helps ..." 
+  ".... ..... ... ..... ... ..... ..." 
+  /auto ;
+}
+
 #help  {grid-area: helps;font-size: 16px; color: rgb(255, 255, 255);}
 #busha  {grid-area: bush;font-size: 16px; color: rgb(255, 255, 255);}
 #tuea  {grid-area: tue;font-size: 16px; color: rgb(255, 255, 255);}
 #makimonoa  {grid-area: maki;font-size: 16px; color: rgb(255, 255, 255);}
 #udewaa  {grid-area: ude;font-size: 16px; color: rgb(255, 255, 255);}
 #tuboa  {grid-area: tubo;font-size: 16px; color: rgb(255, 255, 255);}
+#help,#busha,#tuea,#makimonoa,#udewaa,#tuboa {
+  display: inline-block;
+}
 
 
 .nbutton{
@@ -271,16 +283,16 @@ label {
   display: none;
 }
 
-nav {
+.carousel nav {
   margin-top: 16px;
   text-align: center;
 }
 
-nav button + button {
+.carousel nav button + button {
   margin-left: 8px;
 }
 
-nav button {
+.carousel nav button {
   border: none;
   width: 16px;
   height: 16px;
