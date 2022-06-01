@@ -1,4 +1,14 @@
 /*  */
+/* inisyalaiz */
+/*  */
+a{
+  text-decoration: none;
+}
+a:hover{
+  text-decoration: none;
+}
+
+/*  */
 /* common */
 /*  */
 /*  */
@@ -33,17 +43,25 @@ header{
   background-color: rgb(41, 15, 0);
   display: grid;
   grid-template:
-  "... ..... .... ...... ..." 0px
-  "... time  .... ...... ..." 12px
-  "... hed   .... ...... ..." 4px 
-  "... hed   .... helps  ..." 12px
-  "... hed   .... ...... ..." 16px
-  "... ..... .... ...... ..." auto
-  /0px 1fr   auto 62px   4px;
+  "... ..... ... .... ... .... ... ...... ..." 5%
+  "... time  ... .... ... .... ... ...... ..." 12px
+  "... ..... ... bush ... tue  ... maki   ..." 5%
+  "... ..... ... bush ... tue  ... maki   ..." 12px 
+  "... hed   ... .... ... .... ... ...... ..." 10%
+  "... hed   ... ude  ... tubo ... helps  ..." 12px
+  "... hed   ... .... ... .... ... ...... ..." 24px
+  "... ..... ... .... ... .... ... ...... ..." 
+  /4px 1fr   4px auto 8px auto 8px auto   12px;
 }
 #getday{grid-area: time; font-size: 4px; color: #999;}
-#hedp  {grid-area: hed;  font-size: 24px; color: rgb(255, 255, 255); white-space: nowrap}
+#hedp  {grid-area: hed;  font-size: 28px; color: rgb(255, 255, 255); white-space: nowrap}
 #help  {grid-area: helps;font-size: 16px; color: rgb(255, 255, 255);}
+#busha  {grid-area: bush;font-size: 16px; color: rgb(255, 255, 255);}
+#tuea  {grid-area: tue;font-size: 16px; color: rgb(255, 255, 255);}
+#makimonoa  {grid-area: maki;font-size: 16px; color: rgb(255, 255, 255);}
+#udewaa  {grid-area: ude;font-size: 16px; color: rgb(255, 255, 255);}
+#tuboa  {grid-area: tubo;font-size: 16px; color: rgb(255, 255, 255);}
+
 
 .nbutton{
   justify-content: center;
@@ -185,6 +203,7 @@ label {
   cursor: pointer;
   border-radius: 5px;
 }
+
 
 
 /* carousel */
@@ -343,6 +362,8 @@ footer {
 /*  */
 /* small screen */
 /*  */
-@media (min-width: 0px) and (maX-width: 560px){
+@media (min-width: 0px) and (maX-width: 620px){
+
+  #hedp  {grid-area: hed;  font-size: 20px; color: rgb(255, 255, 255); white-space: nowrap}
 
 }

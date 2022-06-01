@@ -6,12 +6,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=0.8">
   <link rel="stylesheet" href="css/style.css">
   <link rel="icon" href="img/myicon.ico">
-  <title>値段識別サイト風来のシレン5</title>
+  <title>値段識別補助サイト 風来のシレン5</title>
 </head>
 <body>
 <header class="gridh" id="headersa">
   <time id = "getday"></time>
   <div id = "hedp">風来のシレン５の値段識別補助サイト</div>
+  <a href="#bush" id="busha">草</a>
+  <a href="#tues" id="tuea">杖</a>
+  <a href="#makimonos" id="makimonoa">巻物</a>
+  <a href="#udewas" id="udewaa">腕輪</a>
+  <a href="#tubos" id="tuboa">壺</a>
   <a href="#menu" id = "help">ヘルプ</a>
 </header>
 <section class="carousel" id="carouselsa">
@@ -64,7 +69,7 @@
   </main>
 <aside id="asaidesa">
   <fieldset>
-    <legend>草</legend>
+    <legend id="bush">草</legend>
     <input type="checkbox" id="tyeck0" value="忌火起草">
     <label for="tyeck0" >忌火起草</label>
     <input type="checkbox" id="tyeck1" value="しあわせ草">
@@ -130,8 +135,9 @@
     <input type="checkbox" id="tyeck31" value ="雑草">
     <label for="tyeck31">雑草</label>
   </fieldset>
+  <a href="#" class="topdat"> ΔTOP </a>
   <fieldset>
-    <legend>杖</legend>
+    <legend id="tues">杖</legend>
     <input type="checkbox" id="tyeck32" value="しあわせの杖">
     <label for="tyeck32">しあわせの杖</label>
     <input type="checkbox" id="tyeck33" value="しわよせの杖">
@@ -179,8 +185,9 @@
     <input type="checkbox" id="tyeck54" value="鈍足の杖">
     <label for="tyeck54">鈍足の杖</label>
   </fieldset>
+  <a href="#" class="topdat"> ΔTOP </a>
   <fieldset>
-      <legend>巻物</legend>
+      <legend id="makimonos">巻物</legend>
       <input type="checkbox" id="tyeck55" value="ねだやしの巻物">
       <label for ="tyeck55">ねだやしの巻物</label>
       <input type="checkbox" id="tyeck56" value="白紙の巻物">
@@ -287,10 +294,10 @@
       <label for ="tyeck106">ただの紙切れ</label>
       <input type="checkbox" id="tyeck107" value="ぬれた巻物">
       <label for ="tyeck107">ぬれた巻物</label>
-
   </fieldset>
+    <a href="#" class="topdat"> ΔTOP </a>
   <fieldset>
-      <legend>腕輪</legend>
+      <legend id="udewas">腕輪</legend>
       <input type="checkbox" id="tyeck108" value="IP腕輪">
       <label for="tyeck108">VIP腕輪</label>
       <input type="checkbox" id="tyeck109" value="定師の腕輪">
@@ -357,10 +364,10 @@
       <label for="tyeck139">武器束ねの腕輪</label>
       <input type="checkbox" id="tyeck140" value="ヘタ投げの腕輪">
       <label for="tyeck140">ヘタ投げの腕輪</label>
-
-  </fieldset>
+    </fieldset>
+    <a href="#" class="topdat"> ΔTOP </a>
   <fieldset>
-      <legend>壺</legend>
+      <legend id="tubos">壺</legend>
       <input type="checkbox" id="tyeck141" value="強イヒの壺">
       <label for="tyeck141">強イヒの壺</label>
       <input type="checkbox" id="tyeck142" value="福寄せの壺">
@@ -427,8 +434,8 @@
       <label for="tyeck172">やりすごしの壺</label>
       <input type="checkbox" id="tyeck173" value="四二鉢">
       <label for="tyeck173">四二鉢</label>
-  </fieldset>
-
+    </fieldset>
+    <a href="#" class="topdat"> ΔTOP </a>
 </aside>
   <div class="gridtb">
     <ul class="ment" id="menu">
@@ -445,7 +452,9 @@
     </section>
     <section class="contentg" id="helpb">
       <ul>
-        <li>チェックを入れたアイテムは、表示されなくなります。</li>
+        <li>アイテム名をクリックすると、色が変わりチェック状態となります。</li>
+        <li>識別チェックシートとして使用してください</li>
+        <li>チェックされているアイテムが検索された場合、検索結果のアイテムの文字が赤くなります。</li>
       </ul>
     </section>
     <section class="contentg" id="helpc">
